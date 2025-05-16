@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Verilog | Shibo Chen</title>
+    <link>http://localhost:1313/~chshibo/tags/verilog/</link>
+      <atom:link href="http://localhost:1313/~chshibo/tags/verilog/index.xml" rel="self" type="application/rss+xml" />
+    <description>Verilog</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 10 Dec 2018 16:32:31 -0400</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/~chshibo/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
+      <title>Verilog</title>
+      <link>http://localhost:1313/~chshibo/tags/verilog/</link>
+    </image>
+    
+    <item>
+      <title>An Alpha-64 Out-of-Order Processor Design</title>
+      <link>http://localhost:1313/~chshibo/project/alpha64/</link>
+      <pubDate>Mon, 10 Dec 2018 16:32:31 -0400</pubDate>
+      <guid>http://localhost:1313/~chshibo/project/alpha64/</guid>
+      <description>&lt;p&gt;Our team implemented a three-way superscalar alpha-64 out-of-order CPU. We are able to achieve 100MHz and IPC of 0.94 with Synopsys 90nm generic library for education under the constraint area requirements.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

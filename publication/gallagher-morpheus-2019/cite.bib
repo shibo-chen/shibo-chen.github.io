@@ -1,0 +1,17 @@
+@inproceedings{gallagher_morpheus:_2019,
+ abstract = {Attacks often succeed by abusing the gap between program and machine-level semantics-- for example, by locating a sensitive pointer, exploiting a bug to overwrite this sensitive data, and hijacking the victim program's execution. In this work, we take secure system design on the offensive by continuously obfuscating information that attackers need but normal programs do not use, such as representation of code and pointers or the exact location of code and data. Our secure hardware architecture, Morpheus, combines two powerful protections: ensembles of moving target defenses and churn. Ensembles of moving target defenses randomize key program values (e.g., relocating pointers and encrypting code and pointers) which forces attackers to extensively probe the system prior to an attack. To ensure attack probes fail, the architecture incorporates churn to transparently re-randomize program values underneath the running system. With frequent churn, systems quickly become impractically difficult to penetrate. We demonstrate Morpheus through a RISC-V-based prototype designed to stop control-flow attacks. Each moving target defense in Morpheus uses hardware support to individually offer more randomness at a lower cost than previous techniques. When ensembled with churn, Morpheus defenses offer strong protection against control-flow attacks, with our security testing and performance studies revealing: i) high-coverage protection for a broad array of control-flow attacks, including protections for advanced attacks and an attack disclosed after the design of Morpheus, and ii) negligible performance impacts (1%) with churn periods up to 50 ms, which our study estimates to be at least 5000x faster than the time necessary to possibly penetrate Morpheus.},
+ address = {New York, NY, USA},
+ author = {Gallagher, Mark and Biernacki, Lauren and Chen, Shibo and Aweke, Zelalem Birhanu and Yitbarek, Salessawi Ferede and Aga, Misiker Tadesse and Harris, Austin and Xu, Zhixing and Kasikci, Baris and Bertacco, Valeria and Malik, Sharad and Tiwari, Mohit and Austin, Todd},
+ booktitle = {Proceedings of the Twenty-Fourth International Conference on Architectural Support for Programming Languages and Operating Systems},
+ doi = {10.1145/3297858.3304037},
+ isbn = {978-1-4503-6240-5},
+ keywords = {moving target defense, runtime randomization},
+ note = {event-place: Providence, RI, USA},
+ pages = {469--484},
+ publisher = {ACM},
+ series = {ASPLOS '19},
+ title = {Morpheus: A Vulnerability-Tolerant Secure Architecture Based on Ensembles of Moving Target Defenses with Churn},
+ url = {http://doi.acm.org/10.1145/3297858.3304037},
+ year = {2019}
+}
+

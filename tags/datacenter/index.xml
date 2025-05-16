@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Datacenter | Shibo Chen</title>
+    <link>http://localhost:1313/~chshibo/tags/datacenter/</link>
+      <atom:link href="http://localhost:1313/~chshibo/tags/datacenter/index.xml" rel="self" type="application/rss+xml" />
+    <description>Datacenter</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 30 Apr 2019 16:32:24 -0400</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/~chshibo/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
+      <title>Datacenter</title>
+      <link>http://localhost:1313/~chshibo/tags/datacenter/</link>
+    </image>
+    
+    <item>
+      <title>Deep Dive Into the Cost of Context Switch</title>
+      <link>http://localhost:1313/~chshibo/project/context_switch/</link>
+      <pubDate>Tue, 30 Apr 2019 16:32:24 -0400</pubDate>
+      <guid>http://localhost:1313/~chshibo/project/context_switch/</guid>
+      <description>&lt;p&gt;In this project, we are trying to identify the major components of the context swtich overhead on modern CPUs. We showed that data cache misses and d-TLB misses are two major contributors of the overhead. Furthermore, we showed that it requires a non-trivial effort to implement an user-level multithreading library.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

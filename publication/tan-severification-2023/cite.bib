@@ -1,0 +1,17 @@
+@inproceedings{10.1145/3576915.3616643,
+author = {Tan, Qinhan and Fisseha, Yonathan and Chen, Shibo and Biernacki, Lauren and Jeannin, Jean-Baptiste and Malik, Sharad and Austin, Todd},
+title = {Security Verification of Low-Trust Architectures},
+year = {2023},
+isbn = {9798400700507},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3576915.3616643},
+doi = {10.1145/3576915.3616643},
+abstract = {Low-trust architectures work on, from the viewpoint of software, always-encrypted data, and significantly reduce the amount of hardware trust to a small software-free enclave component. In this paper, we perform a complete formal verification of a specific low-trust architecture, the Sequestered Encryption (SE) architecture, to show that the design is secure against direct data disclosures and digital side channels for all possible programs. We first define the security requirements of the ISA of SE low-trust architecture. Looking upwards, this ISA serves as an abstraction of the hardware for the software, and is used to show how any program comprising these instructions cannot leak information, including through digital side channels. Looking downwards this ISA is a specification for the hardware, and is used to define the proof obligations for any RTL implementation arising from the ISA-level security requirements. These cover both functional and digital side-channel leakage. Next, we show how these proof obligations can be successfully discharged using commercial formal verification tools. We demonstrate the efficacy of our RTL security verification technique for seven different correct and buggy implementations of the SE architecture.},
+booktitle = {Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security},
+pages = {945–959},
+numpages = {15},
+keywords = {low-trust architecture, formal verification, information flow},
+location = {<conf-loc>, <city>Copenhagen</city>, <country>Denmark</country>, </conf-loc>},
+series = {CCS '23}
+}
