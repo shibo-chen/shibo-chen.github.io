@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications | Shibo Chen</title>
-    <link>http://localhost:1313/~chshibo/publication/</link>
-      <atom:link href="http://localhost:1313/~chshibo/publication/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://shibo-chen.github.io/publication/</link>
+      <atom:link href="https://shibo-chen.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/~chshibo/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
+      <url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
       <title>Publications</title>
-      <link>http://localhost:1313/~chshibo/publication/</link>
+      <link>https://shibo-chen.github.io/publication/</link>
     </image>
     
     <item>
       <title>Zipper: Latency-Tolerant Optimizations for High-Performance Buses</title>
-      <link>http://localhost:1313/~chshibo/publication/chen-zipper-2025/</link>
+      <link>https://shibo-chen.github.io/publication/chen-zipper-2025/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/publication/chen-zipper-2025/</guid>
+      <guid>https://shibo-chen.github.io/publication/chen-zipper-2025/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Security Verification of Low-Trust Architectures</title>
-      <link>http://localhost:1313/~chshibo/publication/tan-severification-2023/</link>
+      <link>https://shibo-chen.github.io/publication/tan-severification-2023/</link>
       <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/publication/tan-severification-2023/</guid>
+      <guid>https://shibo-chen.github.io/publication/tan-severification-2023/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Twine: A Chisel Extension for Component-Level Heterogeneous Design</title>
-      <link>http://localhost:1313/~chshibo/publication/chen-twine-2022/</link>
+      <link>https://shibo-chen.github.io/publication/chen-twine-2022/</link>
       <pubDate>Thu, 17 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/publication/chen-twine-2022/</guid>
+      <guid>https://shibo-chen.github.io/publication/chen-twine-2022/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Morpheus: A Vulnerability-Tolerant Secure Architecture Based on Ensembles of Moving Target Defenses with Churn</title>
-      <link>http://localhost:1313/~chshibo/publication/gallagher-morpheus-2019/</link>
+      <link>https://shibo-chen.github.io/publication/gallagher-morpheus-2019/</link>
       <pubDate>Sat, 13 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/publication/gallagher-morpheus-2019/</guid>
+      <guid>https://shibo-chen.github.io/publication/gallagher-morpheus-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CommPact: Evaluating the Feasibility of Autonomous Vehicle Contracts</title>
-      <link>http://localhost:1313/~chshibo/publication/erickson-commpact-2018/</link>
+      <link>https://shibo-chen.github.io/publication/erickson-commpact-2018/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/publication/erickson-commpact-2018/</guid>
+      <guid>https://shibo-chen.github.io/publication/erickson-commpact-2018/</guid>
       <description></description>
     </item>
     

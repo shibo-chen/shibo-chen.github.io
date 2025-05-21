@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Security | Shibo Chen</title>
-    <link>http://localhost:1313/~chshibo/tags/security/</link>
-      <atom:link href="http://localhost:1313/~chshibo/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://shibo-chen.github.io/tags/security/</link>
+      <atom:link href="https://shibo-chen.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <description>Security</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 17 Dec 2019 16:31:43 -0400</lastBuildDate>
     <image>
-      <url>http://localhost:1313/~chshibo/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
+      <url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
       <title>Security</title>
-      <link>http://localhost:1313/~chshibo/tags/security/</link>
+      <link>https://shibo-chen.github.io/tags/security/</link>
     </image>
     
     <item>
       <title>Shadowclone: Thwarting and Detecting DOP Attacks with Stack Layout Randomization and Canary</title>
-      <link>http://localhost:1313/~chshibo/project/shadowclone/</link>
+      <link>https://shibo-chen.github.io/project/shadowclone/</link>
       <pubDate>Tue, 17 Dec 2019 16:31:43 -0400</pubDate>
-      <guid>http://localhost:1313/~chshibo/project/shadowclone/</guid>
+      <guid>https://shibo-chen.github.io/project/shadowclone/</guid>
       <description>&lt;p&gt;Control-flow hijacking attacks have been hard to deploy due to the widespread adoption of control-flow attack defenses such as Control-flow Integrity (CFI). This fact has led to a wide deployment of exploiting non-control data, which are not protected by CFI defenses. Non-control data attacks can be used to corrupt critical data or leak sensitive information. Furthermore, data-oriented programming (DOP) is able to achieve Turing-complete computation capabilities without leaving the control-flow graph of the programs. In this paper, we present a compile time stack layout randomization scheme- Shadowclone -to thwart and detect DOP attacks effectively. Shadowclone generates randomized clones of vulnerable target functions and randomly selects one copy of clones to execute during runtime. In addition, we also insert compile-time random canaries into stack variables and check its integrity before the function returns. In the evaluation section, we show that our approach can thwart and detect DOP attacks efficiently by limiting attacker’s success chance to less than 1%. Shadowclone also has low performance overhead when the program is small and has few function calls.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>ThundaTag: Disparate Domain Tagging to Enforce Benign Program Behavior</title>
-      <link>http://localhost:1313/~chshibo/project/thundatag/</link>
+      <link>https://shibo-chen.github.io/project/thundatag/</link>
       <pubDate>Mon, 10 Dec 2018 16:31:43 -0400</pubDate>
-      <guid>http://localhost:1313/~chshibo/project/thundatag/</guid>
+      <guid>https://shibo-chen.github.io/project/thundatag/</guid>
       <description>&lt;p&gt;In this project, we implemented and evaluated the architectural support for domain tagging. Our study shows that such design only requires negligible area overhead and induces low performance overhead.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Understanding the Value of Ensemble of Moving Target Defenses in Morpheus</title>
-      <link>http://localhost:1313/~chshibo/project/morpheus_ensemble/</link>
+      <link>https://shibo-chen.github.io/project/morpheus_ensemble/</link>
       <pubDate>Fri, 31 Aug 2018 16:32:43 -0400</pubDate>
-      <guid>http://localhost:1313/~chshibo/project/morpheus_ensemble/</guid>
+      <guid>https://shibo-chen.github.io/project/morpheus_ensemble/</guid>
       <description>&lt;p&gt;In this work, I studied the average time needed to penetrate a de-featured Morpheus design. The result underscores the robustness of Morpheus defenses.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>PowerSpy Upgraded: Location Tracking using Mobile Device Power Analysis</title>
-      <link>http://localhost:1313/~chshibo/project/powerspy/</link>
+      <link>https://shibo-chen.github.io/project/powerspy/</link>
       <pubDate>Mon, 30 Apr 2018 16:32:51 -0400</pubDate>
-      <guid>http://localhost:1313/~chshibo/project/powerspy/</guid>
+      <guid>https://shibo-chen.github.io/project/powerspy/</guid>
       <description>&lt;p&gt;In this work, we extended the original Powerspy paper to more environments. Our study shows the availability of attacker using this attack to conduct indoor tracking.&lt;/p&gt;
 </description>
     </item>

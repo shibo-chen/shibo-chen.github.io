@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Domain Tagging | Shibo Chen</title>
-    <link>http://localhost:1313/~chshibo/tags/domain-tagging/</link>
-      <atom:link href="http://localhost:1313/~chshibo/tags/domain-tagging/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://shibo-chen.github.io/tags/domain-tagging/</link>
+      <atom:link href="https://shibo-chen.github.io/tags/domain-tagging/index.xml" rel="self" type="application/rss+xml" />
     <description>Domain Tagging</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 10 Dec 2018 16:31:43 -0400</lastBuildDate>
     <image>
-      <url>http://localhost:1313/~chshibo/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
+      <url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
       <title>Domain Tagging</title>
-      <link>http://localhost:1313/~chshibo/tags/domain-tagging/</link>
+      <link>https://shibo-chen.github.io/tags/domain-tagging/</link>
     </image>
     
     <item>
       <title>ThundaTag: Disparate Domain Tagging to Enforce Benign Program Behavior</title>
-      <link>http://localhost:1313/~chshibo/project/thundatag/</link>
+      <link>https://shibo-chen.github.io/project/thundatag/</link>
       <pubDate>Mon, 10 Dec 2018 16:31:43 -0400</pubDate>
-      <guid>http://localhost:1313/~chshibo/project/thundatag/</guid>
+      <guid>https://shibo-chen.github.io/project/thundatag/</guid>
       <description>&lt;p&gt;In this project, we implemented and evaluated the architectural support for domain tagging. Our study shows that such design only requires negligible area overhead and induces low performance overhead.&lt;/p&gt;
 </description>
     </item>

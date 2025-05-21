@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog | Shibo Chen</title>
-    <link>http://localhost:1313/~chshibo/post/</link>
-      <atom:link href="http://localhost:1313/~chshibo/post/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://shibo-chen.github.io/post/</link>
+      <atom:link href="https://shibo-chen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 14 Jan 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/~chshibo/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
+      <url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
       <title>Blog</title>
-      <link>http://localhost:1313/~chshibo/post/</link>
+      <link>https://shibo-chen.github.io/post/</link>
     </image>
     
     <item>
       <title>A Value Proposition for a Computer Architect (TBC)</title>
-      <link>http://localhost:1313/~chshibo/post/value-proposition-comp-arch/</link>
+      <link>https://shibo-chen.github.io/post/value-proposition-comp-arch/</link>
       <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/post/value-proposition-comp-arch/</guid>
+      <guid>https://shibo-chen.github.io/post/value-proposition-comp-arch/</guid>
       <description>&lt;p&gt;As I am aiming to graduate and starting the next chapter of my career in industry, it&amp;rsquo;s warranted for me to start to think how I can become a better computer architect. I will decompose it into three categories. The first is domain knowledge, the second is skills, the third is character.&lt;/p&gt;
 &lt;p&gt;For each category, I will list what is required, why it is required, and what I should do to acquire those &amp;lsquo;Super Power&amp;rsquo;s.&lt;/p&gt;
 &lt;h1 id=&#34;table-of-content&#34;&gt;Table of Content&lt;/h1&gt;
@@ -33,9 +33,9 @@
     
     <item>
       <title>Finally, a sub-4 marathon</title>
-      <link>http://localhost:1313/~chshibo/post/sub4marathon/</link>
+      <link>https://shibo-chen.github.io/post/sub4marathon/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/post/sub4marathon/</guid>
+      <guid>https://shibo-chen.github.io/post/sub4marathon/</guid>
       <description>&lt;p&gt;I have been dreaming of a sub-4 hour marathon for quite some time.&lt;/p&gt;
 &lt;p&gt;Sub-4 may not sound hard for many marathon runners as many aim for sub-3.&lt;/p&gt;
 &lt;p&gt;But it is a good enough goal for me.&lt;/p&gt;
@@ -52,9 +52,9 @@
     
     <item>
       <title>The Great Depression</title>
-      <link>http://localhost:1313/~chshibo/post/great-depression/</link>
+      <link>https://shibo-chen.github.io/post/great-depression/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/post/great-depression/</guid>
+      <guid>https://shibo-chen.github.io/post/great-depression/</guid>
       <description>&lt;p&gt;After my afternoon nap, when I woke up, I was surrounded by an extreme sense of depression, loneliness, and lostness(if this is a word?).&lt;/p&gt;
 &lt;h2 id=&#34;my-great-depression&#34;&gt;My Great Depression&lt;/h2&gt;
 &lt;p&gt;There are a few layers of my depression:&lt;/p&gt;
@@ -75,9 +75,9 @@
     
     <item>
       <title>Writing Blogs</title>
-      <link>http://localhost:1313/~chshibo/post/writing-my-blog/</link>
+      <link>https://shibo-chen.github.io/post/writing-my-blog/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/post/writing-my-blog/</guid>
+      <guid>https://shibo-chen.github.io/post/writing-my-blog/</guid>
       <description>&lt;h2 id=&#34;why-writing&#34;&gt;Why Writing?&lt;/h2&gt;
 &lt;p&gt;Writing is one of the most effective ways to record, but more importantly, organize ideas. Ideas and sparks, if remain in mind only, stay messy and entangled togehter. It may not make sense at all because it entagnles with emotions. Writing is the best way to get it cleared.&lt;/p&gt;
 &lt;p&gt;It also makes sense if I want to share my ideas and thoughts with other people. Good ideas inspires and enboldens people around me and other ideas. It&amp;rsquo;s like throwing out a small fish to bait larger fish.&lt;/p&gt;

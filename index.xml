@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shibo Chen</title>
-    <link>http://localhost:1313/~chshibo/</link>
-      <atom:link href="http://localhost:1313/~chshibo/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://shibo-chen.github.io/</link>
+      <atom:link href="https://shibo-chen.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Shibo Chen</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 14 Jan 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/~chshibo/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
+      <url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
       <title>Shibo Chen</title>
-      <link>http://localhost:1313/~chshibo/</link>
+      <link>https://shibo-chen.github.io/</link>
     </image>
     
     <item>
       <title>A Value Proposition for a Computer Architect (TBC)</title>
-      <link>http://localhost:1313/~chshibo/post/value-proposition-comp-arch/</link>
+      <link>https://shibo-chen.github.io/post/value-proposition-comp-arch/</link>
       <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/post/value-proposition-comp-arch/</guid>
+      <guid>https://shibo-chen.github.io/post/value-proposition-comp-arch/</guid>
       <description>&lt;p&gt;As I am aiming to graduate and starting the next chapter of my career in industry, it&amp;rsquo;s warranted for me to start to think how I can become a better computer architect. I will decompose it into three categories. The first is domain knowledge, the second is skills, the third is character.&lt;/p&gt;
 &lt;p&gt;For each category, I will list what is required, why it is required, and what I should do to acquire those &amp;lsquo;Super Power&amp;rsquo;s.&lt;/p&gt;
 &lt;h1 id=&#34;table-of-content&#34;&gt;Table of Content&lt;/h1&gt;
@@ -33,9 +33,9 @@
     
     <item>
       <title>Finally, a sub-4 marathon</title>
-      <link>http://localhost:1313/~chshibo/post/sub4marathon/</link>
+      <link>https://shibo-chen.github.io/post/sub4marathon/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/post/sub4marathon/</guid>
+      <guid>https://shibo-chen.github.io/post/sub4marathon/</guid>
       <description>&lt;p&gt;I have been dreaming of a sub-4 hour marathon for quite some time.&lt;/p&gt;
 &lt;p&gt;Sub-4 may not sound hard for many marathon runners as many aim for sub-3.&lt;/p&gt;
 &lt;p&gt;But it is a good enough goal for me.&lt;/p&gt;
@@ -52,9 +52,9 @@
     
     <item>
       <title>The Great Depression</title>
-      <link>http://localhost:1313/~chshibo/post/great-depression/</link>
+      <link>https://shibo-chen.github.io/post/great-depression/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/post/great-depression/</guid>
+      <guid>https://shibo-chen.github.io/post/great-depression/</guid>
       <description>&lt;p&gt;After my afternoon nap, when I woke up, I was surrounded by an extreme sense of depression, loneliness, and lostness(if this is a word?).&lt;/p&gt;
 &lt;h2 id=&#34;my-great-depression&#34;&gt;My Great Depression&lt;/h2&gt;
 &lt;p&gt;There are a few layers of my depression:&lt;/p&gt;
@@ -75,9 +75,9 @@
     
     <item>
       <title>Writing Blogs</title>
-      <link>http://localhost:1313/~chshibo/post/writing-my-blog/</link>
+      <link>https://shibo-chen.github.io/post/writing-my-blog/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/post/writing-my-blog/</guid>
+      <guid>https://shibo-chen.github.io/post/writing-my-blog/</guid>
       <description>&lt;h2 id=&#34;why-writing&#34;&gt;Why Writing?&lt;/h2&gt;
 &lt;p&gt;Writing is one of the most effective ways to record, but more importantly, organize ideas. Ideas and sparks, if remain in mind only, stay messy and entangled togehter. It may not make sense at all because it entagnles with emotions. Writing is the best way to get it cleared.&lt;/p&gt;
 &lt;p&gt;It also makes sense if I want to share my ideas and thoughts with other people. Good ideas inspires and enboldens people around me and other ideas. It&amp;rsquo;s like throwing out a small fish to bait larger fish.&lt;/p&gt;
@@ -94,110 +94,110 @@
     
     <item>
       <title>Experience</title>
-      <link>http://localhost:1313/~chshibo/experience/</link>
+      <link>https://shibo-chen.github.io/experience/</link>
       <pubDate>Tue, 10 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/experience/</guid>
+      <guid>https://shibo-chen.github.io/experience/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>http://localhost:1313/~chshibo/projects/</link>
+      <link>https://shibo-chen.github.io/projects/</link>
       <pubDate>Tue, 10 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/projects/</guid>
+      <guid>https://shibo-chen.github.io/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Zipper: Latency-Tolerant Optimizations for High-Performance Buses</title>
-      <link>http://localhost:1313/~chshibo/publication/chen-zipper-2025/</link>
+      <link>https://shibo-chen.github.io/publication/chen-zipper-2025/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/publication/chen-zipper-2025/</guid>
+      <guid>https://shibo-chen.github.io/publication/chen-zipper-2025/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Security Verification of Low-Trust Architectures</title>
-      <link>http://localhost:1313/~chshibo/publication/tan-severification-2023/</link>
+      <link>https://shibo-chen.github.io/publication/tan-severification-2023/</link>
       <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/publication/tan-severification-2023/</guid>
+      <guid>https://shibo-chen.github.io/publication/tan-severification-2023/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Twine: A Chisel Extension for Component-Level Heterogeneous Design</title>
-      <link>http://localhost:1313/~chshibo/publication/chen-twine-2022/</link>
+      <link>https://shibo-chen.github.io/publication/chen-twine-2022/</link>
       <pubDate>Thu, 17 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/publication/chen-twine-2022/</guid>
+      <guid>https://shibo-chen.github.io/publication/chen-twine-2022/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shadowclone: Thwarting and Detecting DOP Attacks with Stack Layout Randomization and Canary</title>
-      <link>http://localhost:1313/~chshibo/project/shadowclone/</link>
+      <link>https://shibo-chen.github.io/project/shadowclone/</link>
       <pubDate>Tue, 17 Dec 2019 16:31:43 -0400</pubDate>
-      <guid>http://localhost:1313/~chshibo/project/shadowclone/</guid>
+      <guid>https://shibo-chen.github.io/project/shadowclone/</guid>
       <description>&lt;p&gt;Control-flow hijacking attacks have been hard to deploy due to the widespread adoption of control-flow attack defenses such as Control-flow Integrity (CFI). This fact has led to a wide deployment of exploiting non-control data, which are not protected by CFI defenses. Non-control data attacks can be used to corrupt critical data or leak sensitive information. Furthermore, data-oriented programming (DOP) is able to achieve Turing-complete computation capabilities without leaving the control-flow graph of the programs. In this paper, we present a compile time stack layout randomization scheme- Shadowclone -to thwart and detect DOP attacks effectively. Shadowclone generates randomized clones of vulnerable target functions and randomly selects one copy of clones to execute during runtime. In addition, we also insert compile-time random canaries into stack variables and check its integrity before the function returns. In the evaluation section, we show that our approach can thwart and detect DOP attacks efficiently by limiting attacker’s success chance to less than 1%. Shadowclone also has low performance overhead when the program is small and has few function calls.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Deep Dive Into the Cost of Context Switch</title>
-      <link>http://localhost:1313/~chshibo/project/context_switch/</link>
+      <link>https://shibo-chen.github.io/project/context_switch/</link>
       <pubDate>Tue, 30 Apr 2019 16:32:24 -0400</pubDate>
-      <guid>http://localhost:1313/~chshibo/project/context_switch/</guid>
+      <guid>https://shibo-chen.github.io/project/context_switch/</guid>
       <description>&lt;p&gt;In this project, we are trying to identify the major components of the context swtich overhead on modern CPUs. We showed that data cache misses and d-TLB misses are two major contributors of the overhead. Furthermore, we showed that it requires a non-trivial effort to implement an user-level multithreading library.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Morpheus: A Vulnerability-Tolerant Secure Architecture Based on Ensembles of Moving Target Defenses with Churn</title>
-      <link>http://localhost:1313/~chshibo/publication/gallagher-morpheus-2019/</link>
+      <link>https://shibo-chen.github.io/publication/gallagher-morpheus-2019/</link>
       <pubDate>Sat, 13 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/publication/gallagher-morpheus-2019/</guid>
+      <guid>https://shibo-chen.github.io/publication/gallagher-morpheus-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>An Alpha-64 Out-of-Order Processor Design</title>
-      <link>http://localhost:1313/~chshibo/project/alpha64/</link>
+      <link>https://shibo-chen.github.io/project/alpha64/</link>
       <pubDate>Mon, 10 Dec 2018 16:32:31 -0400</pubDate>
-      <guid>http://localhost:1313/~chshibo/project/alpha64/</guid>
+      <guid>https://shibo-chen.github.io/project/alpha64/</guid>
       <description>&lt;p&gt;Our team implemented a three-way superscalar alpha-64 out-of-order CPU. We are able to achieve 100MHz and IPC of 0.94 with Synopsys 90nm generic library for education under the constraint area requirements.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>ThundaTag: Disparate Domain Tagging to Enforce Benign Program Behavior</title>
-      <link>http://localhost:1313/~chshibo/project/thundatag/</link>
+      <link>https://shibo-chen.github.io/project/thundatag/</link>
       <pubDate>Mon, 10 Dec 2018 16:31:43 -0400</pubDate>
-      <guid>http://localhost:1313/~chshibo/project/thundatag/</guid>
+      <guid>https://shibo-chen.github.io/project/thundatag/</guid>
       <description>&lt;p&gt;In this project, we implemented and evaluated the architectural support for domain tagging. Our study shows that such design only requires negligible area overhead and induces low performance overhead.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>CommPact: Evaluating the Feasibility of Autonomous Vehicle Contracts</title>
-      <link>http://localhost:1313/~chshibo/publication/erickson-commpact-2018/</link>
+      <link>https://shibo-chen.github.io/publication/erickson-commpact-2018/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/~chshibo/publication/erickson-commpact-2018/</guid>
+      <guid>https://shibo-chen.github.io/publication/erickson-commpact-2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Understanding the Value of Ensemble of Moving Target Defenses in Morpheus</title>
-      <link>http://localhost:1313/~chshibo/project/morpheus_ensemble/</link>
+      <link>https://shibo-chen.github.io/project/morpheus_ensemble/</link>
       <pubDate>Fri, 31 Aug 2018 16:32:43 -0400</pubDate>
-      <guid>http://localhost:1313/~chshibo/project/morpheus_ensemble/</guid>
+      <guid>https://shibo-chen.github.io/project/morpheus_ensemble/</guid>
       <description>&lt;p&gt;In this work, I studied the average time needed to penetrate a de-featured Morpheus design. The result underscores the robustness of Morpheus defenses.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>PowerSpy Upgraded: Location Tracking using Mobile Device Power Analysis</title>
-      <link>http://localhost:1313/~chshibo/project/powerspy/</link>
+      <link>https://shibo-chen.github.io/project/powerspy/</link>
       <pubDate>Mon, 30 Apr 2018 16:32:51 -0400</pubDate>
-      <guid>http://localhost:1313/~chshibo/project/powerspy/</guid>
+      <guid>https://shibo-chen.github.io/project/powerspy/</guid>
       <description>&lt;p&gt;In this work, we extended the original Powerspy paper to more environments. Our study shows the availability of attacker using this attack to conduct indoor tracking.&lt;/p&gt;
 </description>
     </item>

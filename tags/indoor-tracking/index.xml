@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Indoor Tracking | Shibo Chen</title>
-    <link>http://localhost:1313/~chshibo/tags/indoor-tracking/</link>
-      <atom:link href="http://localhost:1313/~chshibo/tags/indoor-tracking/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://shibo-chen.github.io/tags/indoor-tracking/</link>
+      <atom:link href="https://shibo-chen.github.io/tags/indoor-tracking/index.xml" rel="self" type="application/rss+xml" />
     <description>Indoor Tracking</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 30 Apr 2018 16:32:51 -0400</lastBuildDate>
     <image>
-      <url>http://localhost:1313/~chshibo/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
+      <url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
       <title>Indoor Tracking</title>
-      <link>http://localhost:1313/~chshibo/tags/indoor-tracking/</link>
+      <link>https://shibo-chen.github.io/tags/indoor-tracking/</link>
     </image>
     
     <item>
       <title>PowerSpy Upgraded: Location Tracking using Mobile Device Power Analysis</title>
-      <link>http://localhost:1313/~chshibo/project/powerspy/</link>
+      <link>https://shibo-chen.github.io/project/powerspy/</link>
       <pubDate>Mon, 30 Apr 2018 16:32:51 -0400</pubDate>
-      <guid>http://localhost:1313/~chshibo/project/powerspy/</guid>
+      <guid>https://shibo-chen.github.io/project/powerspy/</guid>
       <description>&lt;p&gt;In this work, we extended the original Powerspy paper to more environments. Our study shows the availability of attacker using this attack to conduct indoor tracking.&lt;/p&gt;
 </description>
     </item>
