@@ -2,176 +2,159 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://shibo-chen.github.io/</loc>
-    <lastmod>2025-01-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://shibo-chen.github.io/post/value-proposition-comp-arch/</loc>
-    <lastmod>2025-01-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://shibo-chen.github.io/post/</loc>
-    <lastmod>2025-01-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://shibo-chen.github.io/post/sub4marathon/</loc>
-    <lastmod>2025-01-06T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://shibo-chen.github.io/post/great-depression/</loc>
-    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://shibo-chen.github.io/post/writing-my-blog/</loc>
-    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://shibo-chen.github.io/experience/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-09-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/projects/</loc>
+    <loc>http://localhost:1313/experience/</loc>
     <lastmod>2024-09-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/publication_types/paper-conference/</loc>
+    <loc>http://localhost:1313/projects/</loc>
+    <lastmod>2024-09-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/publication_types/paper-conference/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/publication_types/</loc>
+    <loc>http://localhost:1313/publication_types/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/publication/</loc>
+    <loc>http://localhost:1313/publication/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/publication/chen-zipper-2025/</loc>
+    <loc>http://localhost:1313/publication/chen-zipper-2025/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/publication/tan-severification-2023/</loc>
+    <loc>http://localhost:1313/publication/tan-severification-2023/</loc>
     <lastmod>2023-08-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/publication/chen-twine-2022/</loc>
+    <loc>http://localhost:1313/publication/chen-twine-2022/</loc>
     <lastmod>2022-03-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/compiler/</loc>
+    <loc>http://localhost:1313/tags/compiler/</loc>
     <lastmod>2019-12-17T16:31:43-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/dop-attack/</loc>
+    <loc>http://localhost:1313/tags/dop-attack/</loc>
     <lastmod>2019-12-17T16:31:43-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/project/</loc>
+    <loc>http://localhost:1313/project/</loc>
     <lastmod>2019-12-17T16:31:43-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/randomization/</loc>
+    <loc>http://localhost:1313/tags/randomization/</loc>
     <lastmod>2019-12-17T16:31:43-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/security/</loc>
+    <loc>http://localhost:1313/tags/security/</loc>
     <lastmod>2019-12-17T16:31:43-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/project/shadowclone/</loc>
+    <loc>http://localhost:1313/project/shadowclone/</loc>
     <lastmod>2019-12-17T16:31:43-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2019-12-17T16:31:43-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/datacenter/</loc>
+    <loc>http://localhost:1313/tags/datacenter/</loc>
     <lastmod>2019-04-30T16:32:24-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/project/context_switch/</loc>
+    <loc>http://localhost:1313/project/context_switch/</loc>
     <lastmod>2019-04-30T16:32:24-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/microarchitecture/</loc>
+    <loc>http://localhost:1313/tags/microarchitecture/</loc>
     <lastmod>2019-04-30T16:32:24-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/operating-system/</loc>
+    <loc>http://localhost:1313/tags/operating-system/</loc>
     <lastmod>2019-04-30T16:32:24-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/publication/gallagher-morpheus-2019/</loc>
+    <loc>http://localhost:1313/publication/gallagher-morpheus-2019/</loc>
     <lastmod>2019-04-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/alpha64/</loc>
+    <loc>http://localhost:1313/tags/alpha64/</loc>
     <lastmod>2018-12-10T16:32:31-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/project/alpha64/</loc>
+    <loc>http://localhost:1313/project/alpha64/</loc>
     <lastmod>2018-12-10T16:32:31-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/architecure/</loc>
+    <loc>http://localhost:1313/tags/architecure/</loc>
     <lastmod>2018-12-10T16:32:31-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/out-of-order/</loc>
+    <loc>http://localhost:1313/tags/out-of-order/</loc>
     <lastmod>2018-12-10T16:32:31-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/r10k/</loc>
+    <loc>http://localhost:1313/tags/r10k/</loc>
     <lastmod>2018-12-10T16:32:31-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/verilog/</loc>
+    <loc>http://localhost:1313/tags/verilog/</loc>
     <lastmod>2018-12-10T16:32:31-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/domain-tagging/</loc>
+    <loc>http://localhost:1313/tags/domain-tagging/</loc>
     <lastmod>2018-12-10T16:31:43-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/project/thundatag/</loc>
+    <loc>http://localhost:1313/project/thundatag/</loc>
     <lastmod>2018-12-10T16:31:43-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/publication/erickson-commpact-2018/</loc>
+    <loc>http://localhost:1313/publication/erickson-commpact-2018/</loc>
     <lastmod>2018-12-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/architecture/</loc>
+    <loc>http://localhost:1313/tags/architecture/</loc>
     <lastmod>2018-08-31T16:32:43-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/hacking/</loc>
+    <loc>http://localhost:1313/tags/hacking/</loc>
     <lastmod>2018-08-31T16:32:43-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/project/morpheus_ensemble/</loc>
+    <loc>http://localhost:1313/project/morpheus_ensemble/</loc>
     <lastmod>2018-08-31T16:32:43-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/android/</loc>
+    <loc>http://localhost:1313/tags/android/</loc>
     <lastmod>2018-04-30T16:32:51-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/indoor-tracking/</loc>
+    <loc>http://localhost:1313/tags/indoor-tracking/</loc>
     <lastmod>2018-04-30T16:32:51-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/power-analysis/</loc>
+    <loc>http://localhost:1313/tags/power-analysis/</loc>
     <lastmod>2018-04-30T16:32:51-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/project/powerspy/</loc>
+    <loc>http://localhost:1313/project/powerspy/</loc>
     <lastmod>2018-04-30T16:32:51-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/side-channel/</loc>
+    <loc>http://localhost:1313/tags/side-channel/</loc>
     <lastmod>2018-04-30T16:32:51-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/post/</loc>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
