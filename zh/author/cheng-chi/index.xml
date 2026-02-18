@@ -1,3 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cheng Chi | 陈士博</title><link>https://shibo-chen.github.io/zh/author/cheng-chi/</link><atom:link href="https://shibo-chen.github.io/zh/author/cheng-chi/index.xml" rel="self" type="application/rss+xml"/><description>Cheng Chi</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 17 Dec 2019 16:31:43 -0400</lastBuildDate><image><url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url><title>Cheng Chi</title><link>https://shibo-chen.github.io/zh/author/cheng-chi/</link></image><item><title>Shadowclone：通过栈布局随机化与 Canary 抵御并检测 DOP 攻击</title><link>https://shibo-chen.github.io/zh/project/shadowclone/</link><pubDate>Tue, 17 Dec 2019 16:31:43 -0400</pubDate><guid>https://shibo-chen.github.io/zh/project/shadowclone/</guid><description>&lt;p>控制流劫持攻击因 CFI 的广泛部署变得更难实施，攻击者因此转向 CFI 难以覆盖的非控制数据利用。非控制数据攻击既可破坏关键状态，也可泄露敏感信息。数据导向编程（DOP）甚至可以在不偏离程序控制流图的前提下实现图灵完备能力。&lt;/p>
-&lt;p>本文提出编译期栈布局随机化方案 Shadowclone，以高效抵御并检测 DOP 攻击。Shadowclone 会为目标脆弱函数生成随机化克隆，并在运行时随机选择其中一个执行；此外，我们还在栈变量中插入编译期随机 Canary，并在函数返回前校验其完整性。&lt;/p>
-&lt;p>评估结果表明，该方法可将攻击成功概率压低到 1% 以下。在程序规模较小、函数调用较少时，Shadowclone 还具有较低性能开销。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cheng Chi | 陈士博</title>
+    <link>https://shibo-chen.github.io/zh/author/cheng-chi/</link>
+      <atom:link href="https://shibo-chen.github.io/zh/author/cheng-chi/index.xml" rel="self" type="application/rss+xml" />
+    <description>Cheng Chi</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 17 Dec 2019 16:31:43 -0400</lastBuildDate>
+    <image>
+      <url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
+      <title>Cheng Chi</title>
+      <link>https://shibo-chen.github.io/zh/author/cheng-chi/</link>
+    </image>
+    
+    <item>
+      <title>Shadowclone：通过栈布局随机化与 Canary 抵御并检测 DOP 攻击</title>
+      <link>https://shibo-chen.github.io/zh/project/shadowclone/</link>
+      <pubDate>Tue, 17 Dec 2019 16:31:43 -0400</pubDate>
+      <guid>https://shibo-chen.github.io/zh/project/shadowclone/</guid>
+      <description>&lt;p&gt;控制流劫持攻击因 CFI 的广泛部署变得更难实施，攻击者因此转向 CFI 难以覆盖的非控制数据利用。非控制数据攻击既可破坏关键状态，也可泄露敏感信息。数据导向编程（DOP）甚至可以在不偏离程序控制流图的前提下实现图灵完备能力。&lt;/p&gt;
+&lt;p&gt;本文提出编译期栈布局随机化方案 Shadowclone，以高效抵御并检测 DOP 攻击。Shadowclone 会为目标脆弱函数生成随机化克隆，并在运行时随机选择其中一个执行；此外，我们还在栈变量中插入编译期随机 Canary，并在函数返回前校验其完整性。&lt;/p&gt;
+&lt;p&gt;评估结果表明，该方法可将攻击成功概率压低到 1% 以下。在程序规模较小、函数调用较少时，Shadowclone 还具有较低性能开销。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

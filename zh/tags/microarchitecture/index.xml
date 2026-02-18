@@ -1,1 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Microarchitecture | 陈士博</title><link>https://shibo-chen.github.io/zh/tags/microarchitecture/</link><atom:link href="https://shibo-chen.github.io/zh/tags/microarchitecture/index.xml" rel="self" type="application/rss+xml"/><description>Microarchitecture</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 30 Apr 2019 16:32:24 -0400</lastBuildDate><image><url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url><title>Microarchitecture</title><link>https://shibo-chen.github.io/zh/tags/microarchitecture/</link></image><item><title>深入理解上下文切换开销</title><link>https://shibo-chen.github.io/zh/project/context_switch/</link><pubDate>Tue, 30 Apr 2019 16:32:24 -0400</pubDate><guid>https://shibo-chen.github.io/zh/project/context_switch/</guid><description>&lt;p>本项目分析现代 CPU 上下文切换开销的主要来源。我们发现数据缓存未命中和 d-TLB 未命中是核心因素，并展示了实现用户态多线程库所需的非平凡工程成本。&lt;/p></description></item><item><title>ThundaTag：通过跨域标签机制约束程序良性行为</title><link>https://shibo-chen.github.io/zh/project/thundatag/</link><pubDate>Mon, 10 Dec 2018 16:31:43 -0400</pubDate><guid>https://shibo-chen.github.io/zh/project/thundatag/</guid><description>&lt;p>在该项目中，我们实现并评估了 domain tagging 的架构支持。研究显示该设计面积开销可忽略，且性能损耗较低。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microarchitecture | 陈士博</title>
+    <link>https://shibo-chen.github.io/zh/tags/microarchitecture/</link>
+      <atom:link href="https://shibo-chen.github.io/zh/tags/microarchitecture/index.xml" rel="self" type="application/rss+xml" />
+    <description>Microarchitecture</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 30 Apr 2019 16:32:24 -0400</lastBuildDate>
+    <image>
+      <url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
+      <title>Microarchitecture</title>
+      <link>https://shibo-chen.github.io/zh/tags/microarchitecture/</link>
+    </image>
+    
+    <item>
+      <title>深入理解上下文切换开销</title>
+      <link>https://shibo-chen.github.io/zh/project/context_switch/</link>
+      <pubDate>Tue, 30 Apr 2019 16:32:24 -0400</pubDate>
+      <guid>https://shibo-chen.github.io/zh/project/context_switch/</guid>
+      <description>&lt;p&gt;本项目分析现代 CPU 上下文切换开销的主要来源。我们发现数据缓存未命中和 d-TLB 未命中是核心因素，并展示了实现用户态多线程库所需的非平凡工程成本。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ThundaTag：通过跨域标签机制约束程序良性行为</title>
+      <link>https://shibo-chen.github.io/zh/project/thundatag/</link>
+      <pubDate>Mon, 10 Dec 2018 16:31:43 -0400</pubDate>
+      <guid>https://shibo-chen.github.io/zh/project/thundatag/</guid>
+      <description>&lt;p&gt;在该项目中，我们实现并评估了 domain tagging 的架构支持。研究显示该设计面积开销可忽略，且性能损耗较低。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,1 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Operating System | 陈士博</title><link>https://shibo-chen.github.io/zh/tags/operating-system/</link><atom:link href="https://shibo-chen.github.io/zh/tags/operating-system/index.xml" rel="self" type="application/rss+xml"/><description>Operating System</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 30 Apr 2019 16:32:24 -0400</lastBuildDate><image><url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url><title>Operating System</title><link>https://shibo-chen.github.io/zh/tags/operating-system/</link></image><item><title>深入理解上下文切换开销</title><link>https://shibo-chen.github.io/zh/project/context_switch/</link><pubDate>Tue, 30 Apr 2019 16:32:24 -0400</pubDate><guid>https://shibo-chen.github.io/zh/project/context_switch/</guid><description>&lt;p>本项目分析现代 CPU 上下文切换开销的主要来源。我们发现数据缓存未命中和 d-TLB 未命中是核心因素，并展示了实现用户态多线程库所需的非平凡工程成本。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Operating System | 陈士博</title>
+    <link>https://shibo-chen.github.io/zh/tags/operating-system/</link>
+      <atom:link href="https://shibo-chen.github.io/zh/tags/operating-system/index.xml" rel="self" type="application/rss+xml" />
+    <description>Operating System</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>zh-Hans</language><lastBuildDate>Tue, 30 Apr 2019 16:32:24 -0400</lastBuildDate>
+    <image>
+      <url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
+      <title>Operating System</title>
+      <link>https://shibo-chen.github.io/zh/tags/operating-system/</link>
+    </image>
+    
+    <item>
+      <title>深入理解上下文切换开销</title>
+      <link>https://shibo-chen.github.io/zh/project/context_switch/</link>
+      <pubDate>Tue, 30 Apr 2019 16:32:24 -0400</pubDate>
+      <guid>https://shibo-chen.github.io/zh/project/context_switch/</guid>
+      <description>&lt;p&gt;本项目分析现代 CPU 上下文切换开销的主要来源。我们发现数据缓存未命中和 d-TLB 未命中是核心因素，并展示了实现用户态多线程库所需的非平凡工程成本。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

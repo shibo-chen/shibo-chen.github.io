@@ -1,1 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Architecture | 陈士博</title><link>https://shibo-chen.github.io/zh/tags/architecture/</link><atom:link href="https://shibo-chen.github.io/zh/tags/architecture/index.xml" rel="self" type="application/rss+xml"/><description>Architecture</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>zh-Hans</language><lastBuildDate>Fri, 31 Aug 2018 16:32:43 -0400</lastBuildDate><image><url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url><title>Architecture</title><link>https://shibo-chen.github.io/zh/tags/architecture/</link></image><item><title>理解 Morpheus 中移动目标防御集成的价值</title><link>https://shibo-chen.github.io/zh/project/morpheus_ensemble/</link><pubDate>Fri, 31 Aug 2018 16:32:43 -0400</pubDate><guid>https://shibo-chen.github.io/zh/project/morpheus_ensemble/</guid><description>&lt;p>这项工作评估了攻破降配版 Morpheus 设计所需平均时间，结果体现了 Morpheus 防御机制的鲁棒性。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Architecture | 陈士博</title>
+    <link>https://shibo-chen.github.io/zh/tags/architecture/</link>
+      <atom:link href="https://shibo-chen.github.io/zh/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <description>Architecture</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>zh-Hans</language><lastBuildDate>Fri, 31 Aug 2018 16:32:43 -0400</lastBuildDate>
+    <image>
+      <url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
+      <title>Architecture</title>
+      <link>https://shibo-chen.github.io/zh/tags/architecture/</link>
+    </image>
+    
+    <item>
+      <title>理解 Morpheus 中移动目标防御集成的价值</title>
+      <link>https://shibo-chen.github.io/zh/project/morpheus_ensemble/</link>
+      <pubDate>Fri, 31 Aug 2018 16:32:43 -0400</pubDate>
+      <guid>https://shibo-chen.github.io/zh/project/morpheus_ensemble/</guid>
+      <description>&lt;p&gt;这项工作评估了攻破降配版 Morpheus 设计所需平均时间，结果体现了 Morpheus 防御机制的鲁棒性。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
