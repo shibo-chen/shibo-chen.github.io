@@ -1,33 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Blog | Shibo Chen</title>
-    <link>https://shibo-chen.github.io/blog/</link>
-      <atom:link href="https://shibo-chen.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
-    <description>Blog</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 18 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url>
-      <title>Blog</title>
-      <link>https://shibo-chen.github.io/blog/</link>
-    </image>
-    
-    <item>
-      <title>From Book Smart and Street Smart to System Smart</title>
-      <link>https://shibo-chen.github.io/blog/book-smart-street-smart-system-smart/</link>
-      <pubDate>Wed, 18 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://shibo-chen.github.io/blog/book-smart-street-smart-system-smart/</guid>
-      <description>&lt;p&gt;People often discuss &lt;code&gt;book smart&lt;/code&gt; vs. &lt;code&gt;street smart&lt;/code&gt;, which maps well to an old saying: read widely and travel widely.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;book smart&lt;/code&gt; comes from study and theory. Its strength is structured knowledge, but in complex execution it can underweight the human factors that determine whether plans actually land.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;street smart&lt;/code&gt; comes from real-world iteration. It includes practical techniques rarely found in textbooks, along with judgment on collaboration, influence, and resource coordination.&lt;/p&gt;
-&lt;p&gt;That is why people who are mostly &lt;code&gt;book smart&lt;/code&gt; are often impressed by &lt;code&gt;street smart&lt;/code&gt; execution. You suddenly realize there are other ways to move work forward. For example, school teaches you how to write high-quality software, which is &lt;code&gt;book smart&lt;/code&gt;; real product development requires cross-functional alignment, customer discovery, and resource negotiation, which is more &lt;code&gt;street smart&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;But over the past year, I have learned that both &lt;code&gt;book smart&lt;/code&gt; and &lt;code&gt;street smart&lt;/code&gt; are still skill-layer capabilities. They can solve local problems quickly, yet they rarely scale to help a team or company deliver a truly complex project end to end.&lt;/p&gt;
-&lt;p&gt;At that scale, you need the power of &lt;code&gt;system&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;system&lt;/code&gt; means building an efficient, executable operating framework: planning and time management, information flow, resource allocation, risk control, and feedback loops. As complexity grows, capital, people, and external partners all enter the picture, and their incentives, attitudes, and execution quality will never stay perfectly aligned. At this stage, de-risking does not come from overworking individuals or from a few clever tactics. It comes from repeatable process and architecture.&lt;/p&gt;
-&lt;p&gt;System thinking is not separate from &lt;code&gt;book smart&lt;/code&gt; or &lt;code&gt;street smart&lt;/code&gt;. It is closer to a translation layer: distill individual &lt;code&gt;street smart&lt;/code&gt; into &lt;code&gt;book smart&lt;/code&gt; that others can execute and follow, then scale it across the organization.&lt;/p&gt;
-&lt;p&gt;I increasingly believe that a mature organization should enable people to do great work through clear systems, not by depending too heavily on a few individuals&amp;rsquo; personal instincts.&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog | Shibo Chen</title><link>https://shibo-chen.github.io/blog/</link><atom:link href="https://shibo-chen.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><description>Blog</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 19 Feb 2026 00:00:00 +0000</lastBuildDate><image><url>https://shibo-chen.github.io/media/icon_hu86162c900c18b805235afbee0e76ef56_2947_512x512_fill_lanczos_center_3.png</url><title>Blog</title><link>https://shibo-chen.github.io/blog/</link></image><item><title>Saying No Is a Commitment to Your Long-Term Goals</title><link>https://shibo-chen.github.io/blog/boundaries-and-say-no-en/</link><pubDate>Thu, 19 Feb 2026 00:00:00 +0000</pubDate><guid>https://shibo-chen.github.io/blog/boundaries-and-say-no-en/</guid><description>&lt;p>Many people misunderstand boundaries as distance, indifference, or unwillingness to help.&lt;br>
+In reality, healthy boundaries mean knowing your direction and taking responsibility for your own time and energy.&lt;/p>
+&lt;p>Saying no is usually not about laziness or cruelty.&lt;br>
+It is about clarity: you know your higher goals, and you choose to protect the effort those goals require.&lt;/p>
+&lt;p>In the short term, rejection can disappoint others.&lt;br>
+In the long term, it protects your focus and lets you invest limited resources where they matter most.&lt;/p>
+&lt;p>If we keep saying yes just to avoid conflict, we often pay a hidden price:&lt;br>
+we look easygoing from the outside, but become anxious inside while our real priorities keep getting delayed.&lt;/p>
+&lt;p>&amp;ldquo;Disappointing someone now to benefit your future self&amp;rdquo; is not selfishness.&lt;br>
+Real friends and family do not measure your worth by one refusal. They are glad to see your long-term growth.&lt;/p>
+&lt;p>Growth is not about satisfying every request.&lt;br>
+It is about building a life you can sustain with intention. Boundaries are not walls; they are direction.&lt;/p></description></item><item><title>敢于说“不”，是对长期目标负责</title><link>https://shibo-chen.github.io/blog/boundaries-and-say-no-zh/</link><pubDate>Thu, 19 Feb 2026 00:00:00 +0000</pubDate><guid>https://shibo-chen.github.io/blog/boundaries-and-say-no-zh/</guid><description>&lt;p>很多人以为“边界感”是一种冷漠，或者是“我不想帮你”的态度。&lt;br>
+但真正的边界感，恰恰是清楚自己的人生方向，并对自己的时间和精力负责。&lt;/p>
+&lt;p>学会对别人 say no，不是因为懒惰，也不是因为狠心。&lt;br>
+更多时候，是因为你知道自己当下最重要的目标是什么，知道什么事情值得长期投入，什么事情只能礼貌地拒绝。&lt;/p>
+&lt;p>短期看，你的拒绝可能会让别人失望。&lt;br>
+但长期看，这种选择是在保护你的专注力，让你把有限资源用在真正重要的事情上。&lt;/p>
+&lt;p>如果我们总是为了“不得罪人”而答应所有请求，结果往往是：&lt;br>
+对外看起来很好说话，对内却越来越焦虑，真正重要的计划被不断推迟。&lt;/p>
+&lt;p>“当下让他人失望，长期对自己有益”，并不是自私。&lt;br>
+真正的朋友和亲人，不会因为你一次拒绝就否定你；相反，他们会更愿意看到你在长期目标上持续成长。&lt;/p>
+&lt;p>成长从来不是把所有人都照顾好，而是把自己的人生经营好。&lt;br>
+边界感，不是墙，而是方向感。&lt;/p></description></item><item><title>From Book Smart and Street Smart to System Smart</title><link>https://shibo-chen.github.io/blog/book-smart-street-smart-system-smart/</link><pubDate>Wed, 18 Feb 2026 00:00:00 +0000</pubDate><guid>https://shibo-chen.github.io/blog/book-smart-street-smart-system-smart/</guid><description>&lt;p>People often discuss &lt;code>book smart&lt;/code> vs. &lt;code>street smart&lt;/code>, which maps well to an old saying: read widely and travel widely.&lt;/p>
+&lt;p>&lt;code>book smart&lt;/code> comes from study and theory. Its strength is structured knowledge, but in complex execution it can underweight the human factors that determine whether plans actually land.&lt;/p>
+&lt;p>&lt;code>street smart&lt;/code> comes from real-world iteration. It includes practical techniques rarely found in textbooks, along with judgment on collaboration, influence, and resource coordination.&lt;/p>
+&lt;p>That is why people who are mostly &lt;code>book smart&lt;/code> are often impressed by &lt;code>street smart&lt;/code> execution. You suddenly realize there are other ways to move work forward. For example, school teaches you how to write high-quality software, which is &lt;code>book smart&lt;/code>; real product development requires cross-functional alignment, customer discovery, and resource negotiation, which is more &lt;code>street smart&lt;/code>.&lt;/p>
+&lt;p>But over the past year, I have learned that both &lt;code>book smart&lt;/code> and &lt;code>street smart&lt;/code> are still skill-layer capabilities. They can solve local problems quickly, yet they rarely scale to help a team or company deliver a truly complex project end to end.&lt;/p>
+&lt;p>At that scale, you need the power of &lt;code>system&lt;/code>.&lt;/p>
+&lt;p>&lt;code>system&lt;/code> means building an efficient, executable operating framework: planning and time management, information flow, resource allocation, risk control, and feedback loops. As complexity grows, capital, people, and external partners all enter the picture, and their incentives, attitudes, and execution quality will never stay perfectly aligned. At this stage, de-risking does not come from overworking individuals or from a few clever tactics. It comes from repeatable process and architecture.&lt;/p>
+&lt;p>System thinking is not separate from &lt;code>book smart&lt;/code> or &lt;code>street smart&lt;/code>. It is closer to a translation layer: distill individual &lt;code>street smart&lt;/code> into &lt;code>book smart&lt;/code> that others can execute and follow, then scale it across the organization.&lt;/p>
+&lt;p>I increasingly believe that a mature organization should enable people to do great work through clear systems, not by depending too heavily on a few individuals&amp;rsquo; personal instincts.&lt;/p></description></item></channel></rss>
