@@ -7,13 +7,13 @@ Santa Clara, CA
 
 ## Summary
 
-- Senior Architect at Tenstorrent focused on chiplet-based AI/ML accelerators, scalable system fabrics, and memory-system architecture.
+- Senior Architect at Tenstorrent focused on chiplet-based AI/ML accelerator systems, scalable fabrics, and memory-system architecture.
 - Expertise in NoC and D2D architecture, non-coherent interconnects, AXI/CHI/PCIe fabrics, and LPDDR/DDR memory systems, with selective use of performance modeling to drive decisions.
 - Known for driving architecture decisions with clear models, tight cross-functional debug loops, and measurable focus on throughput, latency, utilization, power, and area.
 
 ## Core Skills
 
-- AI Accelerator Architecture: chiplet-based AI/ML accelerators, system tradeoff analysis, performance target closure
+- AI Accelerator Architecture: chiplet-based AI/ML accelerator systems, system tradeoff analysis, performance target closure
 - NoC and Interconnects: non-coherent NoC, on-package D2D, routing, QoS, topology, clocking, observability, RAS/debuggability
 - Standards and Fabrics: AXI, CHI, PCIe, cache and fabric integration, heterogeneous SoC connectivity
 - Memory Systems: LPDDR/DDR controllers, memory-channel sizing, interleaving, bandwidth analysis, bottleneck removal
@@ -27,7 +27,7 @@ Santa Clara, CA
 
 *Senior Architect*
 
-- Architected NoC, D2D, and memory-system tradeoffs for chiplet-based AI/ML accelerators including Clio, Mimir, and Keraunos.
+- Architected NoC, D2D, and memory-system tradeoffs across chiplet-based AI/ML accelerator systems, including GDDR, LPDDR, IO, and RISC-V CPU chiplets.
 - Drove architecture studies across routing, topology, QoS, buffering, clocking, and debug visibility to close throughput, latency, utilization, power, and area targets.
 - Defined architecture requirements for links, queues, memory channels, and address interleaving policies, using performance analysis where it materially improved decisions.
 - Debugged performance and power bottlenecks with RTL, physical design, verification, and software teams, tracing workload-level issues back to fabric and memory behavior.
