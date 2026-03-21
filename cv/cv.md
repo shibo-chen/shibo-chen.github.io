@@ -1,14 +1,14 @@
 # Shibo Chen
 
-Senior AI Accelerator / NoC Architect | Chiplet-based systems, D2D interconnects, memory systems, and performance modeling
+Senior Architect | Chiplet-based AI accelerators, NoC and D2D interconnects, and memory-system architecture
 
 Santa Clara, CA  
 [chshibo@outlook.com](mailto:chshibo@outlook.com) | [https://shibo-chen.github.io/](https://shibo-chen.github.io/) | [LinkedIn](https://www.linkedin.com/in/shibo-chen-1314741b4/) | [GitHub](https://github.com/shibo-chen)
 
 ## Summary
 
-- Senior Engineer, Architecture: Performance Model at Tenstorrent focused on chiplet-based AI/ML accelerators and scalable system fabrics.
-- Expertise in NoC and D2D architecture, non-coherent interconnects, AXI/CHI/PCIe fabrics, LPDDR/DDR memory systems, and performance modeling.
+- Senior Architect at Tenstorrent focused on chiplet-based AI/ML accelerators, scalable system fabrics, and memory-system architecture.
+- Expertise in NoC and D2D architecture, non-coherent interconnects, AXI/CHI/PCIe fabrics, and LPDDR/DDR memory systems, with selective use of performance modeling to drive decisions.
 - Known for driving architecture decisions with clear models, tight cross-functional debug loops, and measurable focus on throughput, latency, utilization, power, and area.
 
 ## Core Skills
@@ -25,11 +25,11 @@ Santa Clara, CA
 `May 2025 - Present`  
 **Tenstorrent, Santa Clara, CA**
 
-*Senior Engineer, Architecture: Performance Model*
+*Senior Architect*
 
-- Architected and evaluated NoC, D2D, and memory-system tradeoffs for chiplet-based AI/ML accelerators including Clio, Mimir, and Keraunos.
+- Architected NoC, D2D, and memory-system tradeoffs for chiplet-based AI/ML accelerators including Clio, Mimir, and Keraunos.
 - Drove architecture studies across routing, topology, QoS, buffering, clocking, and debug visibility to close throughput, latency, utilization, power, and area targets.
-- Defined and used performance models to size links, queues, arbiters, memory channels, and address interleaving policies before RTL convergence.
+- Defined architecture requirements for links, queues, memory channels, and address interleaving policies, using performance analysis where it materially improved decisions.
 - Debugged performance and power bottlenecks with RTL, physical design, verification, and software teams, tracing workload-level issues back to fabric and memory behavior.
 - Led architecture reviews and specification work spanning non-coherent NoCs, on-package chiplet interconnects, AXI/CHI/PCIe fabrics, and LPDDR/DDR controller interactions.
 
