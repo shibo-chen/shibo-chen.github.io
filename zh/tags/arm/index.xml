@@ -3,9 +3,9 @@
 &lt;hr>
 &lt;p>&lt;strong>1. RISC-V 在 AI 时代有什么优势？&lt;/strong>&lt;/p>
 &lt;p>有人问：AI 的核心就是 matmul，靠的是自定义指令和硬件加速，或者 vector 指令——ARM 和 x86 都有，那 RISC-V 的优势在哪里？这个问题问到点子上了。&lt;/p>
-&lt;p>单论计算本身，RISC-V 确实没有任何优势，甚至软硬件的优化程度也不如 ARM 和 x86。但现在大家真的是 compute bound 吗？几乎不是了——更多是 memory bound 和 communication bound。&lt;/p>
-&lt;p>要么你学 Cerebras 或 Groq，走 SRAM、wafer-scale、VLIW 这种相对暴力但有效的路子；要么你总避不开要加速 memory 和 communication，把 compute unit 喂饱，把 latency 压下来。&lt;/p>
-&lt;p>加速 memory 和 communication 的主流思路：prefetch、compress、DMA offload。你要不是硬化逻辑，要不是用一堆小 CPU 来做数据搬运。考虑到 AI 模型乃至数据类型日新月异，保持灵活性的话，一堆 CPU 小 core 显然是最聪明的选择。&lt;/p>
+&lt;p>单论计算本身，RISC-V 确实没有任何优势，甚至软硬件的优化程度也不如 ARM 和 x86。但至少在推理侧，大家几乎不再是 compute bound——更多是 memory bound 和 communication bound。训练侧仍然是重度 compute bound，但推理才是大多数系统需要持续优化的实际场景。&lt;/p>
+&lt;p>要么你学 Cerebras（wafer-scale SRAM）或 Groq（无 cache、静态调度的确定性流式执行，TSP 架构），走相对暴力但有效的路子；要么你总避不开要加速 memory 和 communication，把 compute unit 喂饱，把 latency 压下来。&lt;/p>
+&lt;p>加速 memory 和 communication 的主流思路：prefetch、compress、DMA offload。你要不是硬化逻辑，要不是用一堆小 CPU 来做数据搬运。考虑到 AI 模型乃至数据类型日新月异，保持灵活性的话，一堆 CPU 小 core 显然是最聪明的选择。这不只是理论——寒武纪、壁仞等国内 AI 芯片公司，以及 Tenstorrent，都在自己的芯片里用 RISC-V core 承担控制和数据搬运的工作。&lt;/p>
 &lt;p>为了支持 collective communication ops，你又想定制一些指令。这时候该选 ARM 还是 RISC-V？ARM 软件生态成熟，但要付钱，还不能随意定制。RISC-V 开源，GitHub 直接下载，免费，随便改。软件生态没那么完善，但跑几个 data movement kernel 绰绰有余。这么想下来，答案一目了然。&lt;/p>
 &lt;hr>
 &lt;p>&lt;strong>2. ARM 为什么要和客户抢生意？&lt;/strong>&lt;/p>
@@ -13,6 +13,7 @@
 &lt;p>我的解读是：不完全是为了抢生意，更多是为了生存。&lt;/p>
 &lt;p>RISC-V 吃着开源生态的红利，软硬件都在逐步成熟，已经开始冲击 ARM 的中端市场，挑战高端市场只是时间问题。ARM 自己的基本面受到威胁——在高端市场，以现在的 IP 授权模式，能借 AI 硬件浪潮多分到多少？很难乐观，因为高端客户随时可以转向 RISC-V。&lt;/p>
 &lt;p>不是今年，不是明年，但未来总有一天，ARM 的大客户会积攒够足够的能力和底气，拒绝交 ARM 的&amp;quot;税&amp;quot;，转投 RISC-V。如果 ARM 的管理层看不到这一层，那是不称职；正是因为他们看到了，所以唯一的选择就是自己也上桌，亲自咬下一块肉来，保证长远的生存空间。&lt;/p>
+&lt;p>这里还有一个更深的结构性矛盾：ARM 的估值逻辑本质是&amp;quot;卖铲子&amp;quot;——靠 IP 授权吃遍整个半导体食物链，高通、联发科、苹果都是客户。一旦自己下场做 SoC，这些大客户就既是买家又是竞争对手，关系很难处理。而且 ARM 做 SoC 越深，客户们转向 RISC-V 的动力就越强——这几乎是一个自我强化的困局。&lt;/p>
 &lt;hr>
 &lt;p>&lt;strong>3. RISC-V 有没有前景？挑战在哪里？&lt;/strong>&lt;/p>
 &lt;p>前两年我对这个问题也很困惑，甚至觉得很难。但今年我变得异常乐观，原因有两点：&lt;/p>
@@ -21,6 +22,6 @@
 &lt;p>当然，挑战依然存在，主要有三点：&lt;/p>
 &lt;p>&lt;strong>性能与软件优化。&lt;/strong> 能上桌吃饭，不代表有话语权。除了硬件本身的设计仍需时间成熟，ARM 和 x86 多年软硬件共同迭代积累的优势，RISC-V 还需要追赶。&lt;/p>
 &lt;p>&lt;strong>标准化和 ratification 速度太慢。&lt;/strong> 开源大锅饭的代价就是节奏慢。2023 年 Integrated/Attached Matrix Extension Working Group 就成立了，到 2026 年竟然还没 ratify……黄花菜都凉了。所以玄铁干脆自己搞了 MME。RVA23 犯过的错误，不能再来一次了。&lt;/p>
-&lt;p>&lt;strong>碎片化与低端化风险。&lt;/strong> 以前 RISC-V 市场份额小，大家相互合作友好。等真的喝上汤了，会不会开始互相拆台、各建小生态？这还需要拭目以待。&lt;/p>
+&lt;p>&lt;strong>碎片化与低端化风险。&lt;/strong> 以前 RISC-V 市场份额小，大家相互合作友好。等真的喝上汤了，会不会开始互相拆台、各建小生态？值得一提的是，RISC-V International 对这个问题是有意识的——RVA Profile（RVA20、RVA22、RVA23）正是专门用来对抗碎片化的机制，通过定义共同基线让不同厂商的实现保持兼容。方向是对的，但执行力还需要时间验证。&lt;/p>
 &lt;hr>
 &lt;p>这是我第一篇技术偏向更强的博客，仅代表个人观点。有相同或不同看法的，欢迎交个朋友，一起聊。&lt;/p></description></item></channel></rss>
