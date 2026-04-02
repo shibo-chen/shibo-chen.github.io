@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Boundaries on 陈士博</title><link>https://shibo-chen.github.io/zh/tags/boundaries/</link><description>Recent content in Boundaries on 陈士博</description><generator>Hugo</generator><language>zh-Hans</language><lastBuildDate>Thu, 19 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shibo-chen.github.io/zh/tags/boundaries/index.xml" rel="self" type="application/rss+xml"/><item><title>敢于说“不”，是对长期目标负责</title><link>https://shibo-chen.github.io/zh/blog/boundaries-and-say-no/</link><pubDate>Thu, 19 Feb 2026 00:00:00 +0000</pubDate><guid>https://shibo-chen.github.io/zh/blog/boundaries-and-say-no/</guid><description>设定边界、学会拒绝，不是冷漠，而是把时间和精力留给真正重要的长期目标。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Boundaries on 陈士博</title>
+    <link>https://shibo-chen.github.io/zh/tags/boundaries/</link>
+    <description>Recent content in Boundaries on 陈士博</description>
+    <generator>Hugo</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Thu, 19 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://shibo-chen.github.io/zh/tags/boundaries/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>敢于说“不”，是对长期目标负责</title>
+      <link>https://shibo-chen.github.io/zh/blog/boundaries-and-say-no/</link>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://shibo-chen.github.io/zh/blog/boundaries-and-say-no/</guid>
+      <description>设定边界、学会拒绝，不是冷漠，而是把时间和精力留给真正重要的长期目标。</description>
+    </item>
+  </channel>
+</rss>

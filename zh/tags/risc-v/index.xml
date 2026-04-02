@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Risc-V on 陈士博</title><link>https://shibo-chen.github.io/zh/tags/risc-v/</link><description>Recent content in Risc-V on 陈士博</description><generator>Hugo</generator><language>zh-Hans</language><lastBuildDate>Tue, 24 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shibo-chen.github.io/zh/tags/risc-v/index.xml" rel="self" type="application/rss+xml"/><item><title>ARM、RISC-V 与 AI</title><link>https://shibo-chen.github.io/zh/blog/arm-riscv-ai/</link><pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate><guid>https://shibo-chen.github.io/zh/blog/arm-riscv-ai/</guid><description>从三个问题聊聊：RISC-V 在 AI 时代的真实优势、ARM 为何要亲自下场做 SoC，以及 RISC-V 的前景与挑战。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Risc-V on 陈士博</title>
+    <link>https://shibo-chen.github.io/zh/tags/risc-v/</link>
+    <description>Recent content in Risc-V on 陈士博</description>
+    <generator>Hugo</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Tue, 24 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://shibo-chen.github.io/zh/tags/risc-v/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ARM、RISC-V 与 AI</title>
+      <link>https://shibo-chen.github.io/zh/blog/arm-riscv-ai/</link>
+      <pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://shibo-chen.github.io/zh/blog/arm-riscv-ai/</guid>
+      <description>从三个问题聊聊：RISC-V 在 AI 时代的真实优势、ARM 为何要亲自下场做 SoC，以及 RISC-V 的前景与挑战。</description>
+    </item>
+  </channel>
+</rss>

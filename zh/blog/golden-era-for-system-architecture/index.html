@@ -1,7 +1,393 @@
-<!doctype html><html lang=zh dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Computer Architecture，正在进入一个黄金年代 | 陈士博</title>
-<meta name=keywords content="architecture,ai-systems,edge-computing,hardware,semiconductors"><meta name=description content="AI-native 工作负载、边缘端需求崛起，以及更快的实验能力，正在把架构能力重新推回硬件价值创造的中心。"><meta name=author content="Shibo Chen"><link rel=canonical href=https://shibo-chen.github.io/zh/blog/golden-era-for-system-architecture/><link crossorigin=anonymous href=/assets/css/stylesheet.af9cd5dbbc136c1bf88e222842e31973840d392bc92b4253f249fec00e63cbc6.css integrity="sha256-r5zV27wTbBv4jiIoQuMZc4QNOSvJK0JT8kn+wA5jy8Y=" rel="preload stylesheet" as=style><link rel=icon href=https://shibo-chen.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://shibo-chen.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://shibo-chen.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://shibo-chen.github.io/apple-touch-icon.png><link rel=mask-icon href=https://shibo-chen.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://shibo-chen.github.io/blog/golden-era-for-system-architecture/><link rel=alternate hreflang=zh href=https://shibo-chen.github.io/zh/blog/golden-era-for-system-architecture/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><meta property="og:url" content="https://shibo-chen.github.io/zh/blog/golden-era-for-system-architecture/"><meta property="og:site_name" content="陈士博"><meta property="og:title" content="Computer Architecture，正在进入一个黄金年代"><meta property="og:description" content="AI-native 工作负载、边缘端需求崛起，以及更快的实验能力，正在把架构能力重新推回硬件价值创造的中心。"><meta property="og:locale" content="zh_Hans"><meta property="og:type" content="article"><meta property="article:section" content="blog"><meta property="article:published_time" content="2026-03-21T00:00:00+00:00"><meta property="article:modified_time" content="2026-03-21T00:00:00+00:00"><meta property="article:tag" content="Architecture"><meta property="article:tag" content="Ai-Systems"><meta property="article:tag" content="Edge-Computing"><meta property="article:tag" content="Hardware"><meta property="article:tag" content="Semiconductors"><meta name=twitter:card content="summary"><meta name=twitter:title content="Computer Architecture，正在进入一个黄金年代"><meta name=twitter:description content="AI-native 工作负载、边缘端需求崛起，以及更快的实验能力，正在把架构能力重新推回硬件价值创造的中心。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"博客","item":"https://shibo-chen.github.io/zh/blog/"},{"@type":"ListItem","position":2,"name":"Computer Architecture，正在进入一个黄金年代","item":"https://shibo-chen.github.io/zh/blog/golden-era-for-system-architecture/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Computer Architecture，正在进入一个黄金年代","name":"Computer Architecture，正在进入一个黄金年代","description":"AI-native 工作负载、边缘端需求崛起，以及更快的实验能力，正在把架构能力重新推回硬件价值创造的中心。","keywords":["architecture","ai-systems","edge-computing","hardware","semiconductors"],"articleBody":"未来五年，我很看好 computer architecture 的机会，甚至觉得这会是一个黄金年代。\n第一个原因是，agentic AI 的工作负载已经不再只是简单的 number crunching。未来真正重要的，不只是算力够不够大，而是推理与执行能不能在多模态、多任务、多场景里协同起来。这会把问题从“单个计算单元的极致优化”推向“整机系统怎么拼”：CPU、NPU、GPU、matmul、vector、SRAM、DMA、Ethernet、PCIe、optics、DRAM、HBM，到底该怎么组合，才最适合真实 workload。\n换句话说，接下来更有意思的问题，不再只是“某个 accelerator 有多快”，而是“整条 compute、memory、interconnect 链路应该怎样分工”。这本质上是 architecture 的问题。\n第二个原因是 edge 端的崛起。toC 需求天然碎片化，变化快，而且很多市场既不够大到让巨头全力投入，也不够标准化到适合一套通用方案吃遍天下。这就给更灵活的小团队留下了空间。只要找到一个真实存在的需求，把产品和架构收得足够紧，就有机会占住一个 niche market。边缘端也会逼着架构决策更早暴露出来，因为功耗、时延、带宽、隐私和成本经常会同时成为约束。\n第三个原因是，architect 终于比过去更容易亲手验证自己的想法了。以前架构师更像构想者，能提出非常好的系统思路，但从 idea 到实验、到实现，中间要跨过很长的链条，成本也非常高。现在 AI 能帮助大家更快做 tradeoff exploration、自动化一部分迭代工作，把很多原本只停留在纸面上的想法，推进到可实验、可验证的层面。\n这件事的重要性在于，软件在很多领域都会更容易被自动化，也更容易被快速复制。随着软件层的差异化被持续压缩，更多长期价值就会落在硬件行为差异和系统设计差异上。不是说价值只会在硬件上，但 architecture 的含金量会重新上升。\n更有意思的是，这不只是一个市场变大的故事，也是一个创造力重新被释放的故事。更多人有机会以架构师的方式思考，再把这些想法快速推进到现实。下一轮真正精彩的部分，不是局部性能的小修小补，而是更大胆的系统设计重新回到舞台中央。\n","wordCount":"845","inLanguage":"zh","datePublished":"2026-03-21T00:00:00Z","dateModified":"2026-03-21T00:00:00Z","author":{"@type":"Person","name":"Shibo Chen"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://shibo-chen.github.io/zh/blog/golden-era-for-system-architecture/"},"publisher":{"@type":"Organization","name":"陈士博","logo":{"@type":"ImageObject","url":"https://shibo-chen.github.io/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://shibo-chen.github.io/zh/ accesskey=h title="陈士博 (Alt + H)">陈士博</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button><ul class=lang-switch><li>|</li><li><a href=https://shibo-chen.github.io/ title=English aria-label=English>En</a></li></ul></div></div><ul id=menu><li><a href=https://shibo-chen.github.io/zh/blog title=博客><span>博客</span></a></li><li><a href=https://shibo-chen.github.io/zh/publication title=论文><span>论文</span></a></li><li><a href=https://shibo-chen.github.io/zh/experience title=经历><span>经历</span></a></li><li><a href=https://shibo-chen.github.io/zh/cv/index.html title=简历><span>简历</span></a></li><li><a href=https://shibo-chen.github.io/zh/search title=搜索><span>搜索</span></a></li><li><a href=https://shibo-chen.github.io/zh/subscribe title=订阅><span>订阅</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://shibo-chen.github.io/zh/>主页</a>&nbsp;»&nbsp;<a href=https://shibo-chen.github.io/zh/blog/>博客</a></div><h1 class="post-title entry-hint-parent">Computer Architecture，正在进入一个黄金年代</h1><div class=post-meta><span title='2026-03-21 00:00:00 +0000 UTC'>2026年3月21日</span>&nbsp;·&nbsp;<span>2 分钟</span>&nbsp;·&nbsp;<span>Shibo Chen</span>&nbsp;|&nbsp;<span>语言:</span><ul class=i18n_list><li><a href=https://shibo-chen.github.io/blog/golden-era-for-system-architecture/>En</a></li></ul></div></header><div class=post-content><p>未来五年，我很看好 computer architecture 的机会，甚至觉得这会是一个黄金年代。</p><p>第一个原因是，agentic AI 的工作负载已经不再只是简单的 number crunching。未来真正重要的，不只是算力够不够大，而是推理与执行能不能在多模态、多任务、多场景里协同起来。这会把问题从“单个计算单元的极致优化”推向“整机系统怎么拼”：CPU、NPU、GPU、matmul、vector、SRAM、DMA、Ethernet、PCIe、optics、DRAM、HBM，到底该怎么组合，才最适合真实 workload。</p><p>换句话说，接下来更有意思的问题，不再只是“某个 accelerator 有多快”，而是“整条 compute、memory、interconnect 链路应该怎样分工”。这本质上是 architecture 的问题。</p><p>第二个原因是 edge 端的崛起。toC 需求天然碎片化，变化快，而且很多市场既不够大到让巨头全力投入，也不够标准化到适合一套通用方案吃遍天下。这就给更灵活的小团队留下了空间。只要找到一个真实存在的需求，把产品和架构收得足够紧，就有机会占住一个 niche market。边缘端也会逼着架构决策更早暴露出来，因为功耗、时延、带宽、隐私和成本经常会同时成为约束。</p><p>第三个原因是，architect 终于比过去更容易亲手验证自己的想法了。以前架构师更像构想者，能提出非常好的系统思路，但从 idea 到实验、到实现，中间要跨过很长的链条，成本也非常高。现在 AI 能帮助大家更快做 tradeoff exploration、自动化一部分迭代工作，把很多原本只停留在纸面上的想法，推进到可实验、可验证的层面。</p><p>这件事的重要性在于，软件在很多领域都会更容易被自动化，也更容易被快速复制。随着软件层的差异化被持续压缩，更多长期价值就会落在硬件行为差异和系统设计差异上。不是说价值只会在硬件上，但 architecture 的含金量会重新上升。</p><p>更有意思的是，这不只是一个市场变大的故事，也是一个创造力重新被释放的故事。更多人有机会以架构师的方式思考，再把这些想法快速推进到现实。下一轮真正精彩的部分，不是局部性能的小修小补，而是更大胆的系统设计重新回到舞台中央。</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://shibo-chen.github.io/zh/tags/architecture/>Architecture</a></li><li><a href=https://shibo-chen.github.io/zh/tags/ai-systems/>Ai-Systems</a></li><li><a href=https://shibo-chen.github.io/zh/tags/edge-computing/>Edge-Computing</a></li><li><a href=https://shibo-chen.github.io/zh/tags/hardware/>Hardware</a></li><li><a href=https://shibo-chen.github.io/zh/tags/semiconductors/>Semiconductors</a></li></ul><nav class=paginav><a class=prev href=https://shibo-chen.github.io/zh/blog/office-serendipity/><span class=title>« 上一页</span><br><span>为什么要多去办公室办公</span>
-</a><a class=next href=https://shibo-chen.github.io/zh/blog/semiconductor-development-cycle-compression/><span class=title>下一页 »</span><br><span>半导体开发周期，会压缩得比预期更快</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2026 <a href=https://shibo-chen.github.io/zh/>陈士博</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="复制";function s(){t.innerHTML="已复制！",setTimeout(()=>{t.innerHTML="复制"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Computer Architecture，正在进入一个黄金年代 | 陈士博</title>
+<meta name="keywords" content="architecture, ai-systems, edge-computing, hardware, semiconductors">
+<meta name="description" content="AI-native 工作负载、边缘端需求崛起，以及更快的实验能力，正在把架构能力重新推回硬件价值创造的中心。">
+<meta name="author" content="Shibo Chen">
+<link rel="canonical" href="https://shibo-chen.github.io/zh/blog/golden-era-for-system-architecture/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.af9cd5dbbc136c1bf88e222842e31973840d392bc92b4253f249fec00e63cbc6.css" integrity="sha256-r5zV27wTbBv4jiIoQuMZc4QNOSvJK0JT8kn&#43;wA5jy8Y=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://shibo-chen.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://shibo-chen.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://shibo-chen.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://shibo-chen.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://shibo-chen.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://shibo-chen.github.io/blog/golden-era-for-system-architecture/">
+<link rel="alternate" hreflang="zh" href="https://shibo-chen.github.io/zh/blog/golden-era-for-system-architecture/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://shibo-chen.github.io/zh/blog/golden-era-for-system-architecture/">
+  <meta property="og:site_name" content="陈士博">
+  <meta property="og:title" content="Computer Architecture，正在进入一个黄金年代">
+  <meta property="og:description" content="AI-native 工作负载、边缘端需求崛起，以及更快的实验能力，正在把架构能力重新推回硬件价值创造的中心。">
+  <meta property="og:locale" content="zh_Hans">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2026-03-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-03-21T00:00:00+00:00">
+    <meta property="article:tag" content="Architecture">
+    <meta property="article:tag" content="Ai-Systems">
+    <meta property="article:tag" content="Edge-Computing">
+    <meta property="article:tag" content="Hardware">
+    <meta property="article:tag" content="Semiconductors">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Computer Architecture，正在进入一个黄金年代">
+  <meta name="twitter:description" content="AI-native 工作负载、边缘端需求崛起，以及更快的实验能力，正在把架构能力重新推回硬件价值创造的中心。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "博客",
+      "item": "https://shibo-chen.github.io/zh/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Computer Architecture，正在进入一个黄金年代",
+      "item": "https://shibo-chen.github.io/zh/blog/golden-era-for-system-architecture/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Computer Architecture，正在进入一个黄金年代",
+  "name": "Computer Architecture，正在进入一个黄金年代",
+  "description": "AI-native 工作负载、边缘端需求崛起，以及更快的实验能力，正在把架构能力重新推回硬件价值创造的中心。",
+  "keywords": [
+    "architecture", "ai-systems", "edge-computing", "hardware", "semiconductors"
+  ],
+  "articleBody": "未来五年，我很看好 computer architecture 的机会，甚至觉得这会是一个黄金年代。\n第一个原因是，agentic AI 的工作负载已经不再只是简单的 number crunching。未来真正重要的，不只是算力够不够大，而是推理与执行能不能在多模态、多任务、多场景里协同起来。这会把问题从“单个计算单元的极致优化”推向“整机系统怎么拼”：CPU、NPU、GPU、matmul、vector、SRAM、DMA、Ethernet、PCIe、optics、DRAM、HBM，到底该怎么组合，才最适合真实 workload。\n换句话说，接下来更有意思的问题，不再只是“某个 accelerator 有多快”，而是“整条 compute、memory、interconnect 链路应该怎样分工”。这本质上是 architecture 的问题。\n第二个原因是 edge 端的崛起。toC 需求天然碎片化，变化快，而且很多市场既不够大到让巨头全力投入，也不够标准化到适合一套通用方案吃遍天下。这就给更灵活的小团队留下了空间。只要找到一个真实存在的需求，把产品和架构收得足够紧，就有机会占住一个 niche market。边缘端也会逼着架构决策更早暴露出来，因为功耗、时延、带宽、隐私和成本经常会同时成为约束。\n第三个原因是，architect 终于比过去更容易亲手验证自己的想法了。以前架构师更像构想者，能提出非常好的系统思路，但从 idea 到实验、到实现，中间要跨过很长的链条，成本也非常高。现在 AI 能帮助大家更快做 tradeoff exploration、自动化一部分迭代工作，把很多原本只停留在纸面上的想法，推进到可实验、可验证的层面。\n这件事的重要性在于，软件在很多领域都会更容易被自动化，也更容易被快速复制。随着软件层的差异化被持续压缩，更多长期价值就会落在硬件行为差异和系统设计差异上。不是说价值只会在硬件上，但 architecture 的含金量会重新上升。\n更有意思的是，这不只是一个市场变大的故事，也是一个创造力重新被释放的故事。更多人有机会以架构师的方式思考，再把这些想法快速推进到现实。下一轮真正精彩的部分，不是局部性能的小修小补，而是更大胆的系统设计重新回到舞台中央。\n",
+  "wordCount" : "845",
+  "inLanguage": "zh",
+  "datePublished": "2026-03-21T00:00:00Z",
+  "dateModified": "2026-03-21T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Shibo Chen"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://shibo-chen.github.io/zh/blog/golden-era-for-system-architecture/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "陈士博",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://shibo-chen.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://shibo-chen.github.io/zh/" accesskey="h" title="陈士博 (Alt + H)">陈士博</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                    <ul class="lang-switch"><li>|</li>
+                        <li>
+                            <a href="https://shibo-chen.github.io/" title="English"
+                                aria-label="English">En</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://shibo-chen.github.io/zh/blog" title="博客">
+                    <span>博客</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://shibo-chen.github.io/zh/publication" title="论文">
+                    <span>论文</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://shibo-chen.github.io/zh/experience" title="经历">
+                    <span>经历</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://shibo-chen.github.io/zh/cv/index.html" title="简历">
+                    <span>简历</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://shibo-chen.github.io/zh/search" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://shibo-chen.github.io/zh/subscribe" title="订阅">
+                    <span>订阅</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://shibo-chen.github.io/zh/">主页</a>&nbsp;»&nbsp;<a href="https://shibo-chen.github.io/zh/blog/">博客</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Computer Architecture，正在进入一个黄金年代
+    </h1>
+    <div class="post-meta"><span title='2026-03-21 00:00:00 +0000 UTC'>2026年3月21日</span>&nbsp;·&nbsp;<span>2 分钟</span>&nbsp;·&nbsp;<span>Shibo Chen</span>&nbsp;|&nbsp;<span>语言:</span>
+<ul class="i18n_list">
+    <li>
+        <a href="https://shibo-chen.github.io/blog/golden-era-for-system-architecture/">En</a>
+    </li>
+</ul>
+
+</div>
+  </header> 
+  <div class="post-content"><p>未来五年，我很看好 computer architecture 的机会，甚至觉得这会是一个黄金年代。</p>
+<p>第一个原因是，agentic AI 的工作负载已经不再只是简单的 number crunching。未来真正重要的，不只是算力够不够大，而是推理与执行能不能在多模态、多任务、多场景里协同起来。这会把问题从“单个计算单元的极致优化”推向“整机系统怎么拼”：CPU、NPU、GPU、matmul、vector、SRAM、DMA、Ethernet、PCIe、optics、DRAM、HBM，到底该怎么组合，才最适合真实 workload。</p>
+<p>换句话说，接下来更有意思的问题，不再只是“某个 accelerator 有多快”，而是“整条 compute、memory、interconnect 链路应该怎样分工”。这本质上是 architecture 的问题。</p>
+<p>第二个原因是 edge 端的崛起。toC 需求天然碎片化，变化快，而且很多市场既不够大到让巨头全力投入，也不够标准化到适合一套通用方案吃遍天下。这就给更灵活的小团队留下了空间。只要找到一个真实存在的需求，把产品和架构收得足够紧，就有机会占住一个 niche market。边缘端也会逼着架构决策更早暴露出来，因为功耗、时延、带宽、隐私和成本经常会同时成为约束。</p>
+<p>第三个原因是，architect 终于比过去更容易亲手验证自己的想法了。以前架构师更像构想者，能提出非常好的系统思路，但从 idea 到实验、到实现，中间要跨过很长的链条，成本也非常高。现在 AI 能帮助大家更快做 tradeoff exploration、自动化一部分迭代工作，把很多原本只停留在纸面上的想法，推进到可实验、可验证的层面。</p>
+<p>这件事的重要性在于，软件在很多领域都会更容易被自动化，也更容易被快速复制。随着软件层的差异化被持续压缩，更多长期价值就会落在硬件行为差异和系统设计差异上。不是说价值只会在硬件上，但 architecture 的含金量会重新上升。</p>
+<p>更有意思的是，这不只是一个市场变大的故事，也是一个创造力重新被释放的故事。更多人有机会以架构师的方式思考，再把这些想法快速推进到现实。下一轮真正精彩的部分，不是局部性能的小修小补，而是更大胆的系统设计重新回到舞台中央。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://shibo-chen.github.io/zh/tags/architecture/">Architecture</a></li>
+      <li><a href="https://shibo-chen.github.io/zh/tags/ai-systems/">Ai-Systems</a></li>
+      <li><a href="https://shibo-chen.github.io/zh/tags/edge-computing/">Edge-Computing</a></li>
+      <li><a href="https://shibo-chen.github.io/zh/tags/hardware/">Hardware</a></li>
+      <li><a href="https://shibo-chen.github.io/zh/tags/semiconductors/">Semiconductors</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://shibo-chen.github.io/zh/blog/office-serendipity/">
+    <span class="title">« 上一页</span>
+    <br>
+    <span>为什么要多去办公室办公</span>
+  </a>
+  <a class="next" href="https://shibo-chen.github.io/zh/blog/semiconductor-development-cycle-compression/">
+    <span class="title">下一页 »</span>
+    <br>
+    <span>半导体开发周期，会压缩得比预期更快</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://shibo-chen.github.io/zh/">陈士博</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

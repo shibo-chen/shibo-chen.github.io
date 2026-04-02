@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Hardware on 陈士博</title><link>https://shibo-chen.github.io/zh/tags/hardware/</link><description>Recent content in Hardware on 陈士博</description><generator>Hugo</generator><language>zh-Hans</language><lastBuildDate>Tue, 24 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shibo-chen.github.io/zh/tags/hardware/index.xml" rel="self" type="application/rss+xml"/><item><title>ARM、RISC-V 与 AI</title><link>https://shibo-chen.github.io/zh/blog/arm-riscv-ai/</link><pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate><guid>https://shibo-chen.github.io/zh/blog/arm-riscv-ai/</guid><description>从三个问题聊聊：RISC-V 在 AI 时代的真实优势、ARM 为何要亲自下场做 SoC，以及 RISC-V 的前景与挑战。</description></item><item><title>Computer Architecture，正在进入一个黄金年代</title><link>https://shibo-chen.github.io/zh/blog/golden-era-for-system-architecture/</link><pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate><guid>https://shibo-chen.github.io/zh/blog/golden-era-for-system-architecture/</guid><description>AI-native 工作负载、边缘端需求崛起，以及更快的实验能力，正在把架构能力重新推回硬件价值创造的中心。</description></item><item><title>半导体开发周期，会压缩得比预期更快</title><link>https://shibo-chen.github.io/zh/blog/semiconductor-development-cycle-compression/</link><pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate><guid>https://shibo-chen.github.io/zh/blog/semiconductor-development-cycle-compression/</guid><description>当实验、验证与回片的反馈闭环被压缩到天和周的粒度后，芯片研发的节奏会越来越像软件开发，竞争焦点也会随之改变。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hardware on 陈士博</title>
+    <link>https://shibo-chen.github.io/zh/tags/hardware/</link>
+    <description>Recent content in Hardware on 陈士博</description>
+    <generator>Hugo</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Tue, 24 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://shibo-chen.github.io/zh/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ARM、RISC-V 与 AI</title>
+      <link>https://shibo-chen.github.io/zh/blog/arm-riscv-ai/</link>
+      <pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://shibo-chen.github.io/zh/blog/arm-riscv-ai/</guid>
+      <description>从三个问题聊聊：RISC-V 在 AI 时代的真实优势、ARM 为何要亲自下场做 SoC，以及 RISC-V 的前景与挑战。</description>
+    </item>
+    <item>
+      <title>Computer Architecture，正在进入一个黄金年代</title>
+      <link>https://shibo-chen.github.io/zh/blog/golden-era-for-system-architecture/</link>
+      <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://shibo-chen.github.io/zh/blog/golden-era-for-system-architecture/</guid>
+      <description>AI-native 工作负载、边缘端需求崛起，以及更快的实验能力，正在把架构能力重新推回硬件价值创造的中心。</description>
+    </item>
+    <item>
+      <title>半导体开发周期，会压缩得比预期更快</title>
+      <link>https://shibo-chen.github.io/zh/blog/semiconductor-development-cycle-compression/</link>
+      <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://shibo-chen.github.io/zh/blog/semiconductor-development-cycle-compression/</guid>
+      <description>当实验、验证与回片的反馈闭环被压缩到天和周的粒度后，芯片研发的节奏会越来越像软件开发，竞争焦点也会随之改变。</description>
+    </item>
+  </channel>
+</rss>
