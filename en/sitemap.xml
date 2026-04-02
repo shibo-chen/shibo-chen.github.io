@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://shibo-chen.github.io/</loc>
-    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-Hans"
@@ -15,8 +15,34 @@
                 href="https://shibo-chen.github.io/"
                 />
   </url><url>
+    <loc>https://shibo-chen.github.io/tags/ai/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://shibo-chen.github.io/zh/tags/ai/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://shibo-chen.github.io/tags/ai/"
+                />
+  </url><url>
+    <loc>https://shibo-chen.github.io/blog/april-fools-happiness/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://shibo-chen.github.io/zh/blog/april-fools-happiness/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://shibo-chen.github.io/blog/april-fools-happiness/"
+                />
+  </url><url>
     <loc>https://shibo-chen.github.io/blog/</loc>
-    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-Hans"
@@ -26,6 +52,97 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://shibo-chen.github.io/blog/"
+                />
+  </url><url>
+    <loc>https://shibo-chen.github.io/categories/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://shibo-chen.github.io/zh/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://shibo-chen.github.io/categories/"
+                />
+  </url><url>
+    <loc>https://shibo-chen.github.io/tags/happiness/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://shibo-chen.github.io/zh/tags/happiness/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://shibo-chen.github.io/tags/happiness/"
+                />
+  </url><url>
+    <loc>https://shibo-chen.github.io/tags/life/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://shibo-chen.github.io/zh/tags/life/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://shibo-chen.github.io/tags/life/"
+                />
+  </url><url>
+    <loc>https://shibo-chen.github.io/tags/nietzsche/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://shibo-chen.github.io/zh/tags/nietzsche/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://shibo-chen.github.io/tags/nietzsche/"
+                />
+  </url><url>
+    <loc>https://shibo-chen.github.io/tags/philosophy/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://shibo-chen.github.io/zh/tags/philosophy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://shibo-chen.github.io/tags/philosophy/"
+                />
+  </url><url>
+    <loc>https://shibo-chen.github.io/tags/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://shibo-chen.github.io/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://shibo-chen.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://shibo-chen.github.io/categories/thinking/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://shibo-chen.github.io/zh/categories/thinking/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://shibo-chen.github.io/categories/thinking/"
                 />
   </url><url>
     <loc>https://shibo-chen.github.io/tags/care/</loc>
@@ -39,32 +156,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://shibo-chen.github.io/tags/care/"
-                />
-  </url><url>
-    <loc>https://shibo-chen.github.io/categories/</loc>
-    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://shibo-chen.github.io/zh/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://shibo-chen.github.io/categories/"
-                />
-  </url><url>
-    <loc>https://shibo-chen.github.io/tags/philosophy/</loc>
-    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://shibo-chen.github.io/zh/tags/philosophy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://shibo-chen.github.io/tags/philosophy/"
                 />
   </url><url>
     <loc>https://shibo-chen.github.io/tags/quality/</loc>
@@ -93,19 +184,6 @@
                 href="https://shibo-chen.github.io/tags/reading/"
                 />
   </url><url>
-    <loc>https://shibo-chen.github.io/tags/</loc>
-    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://shibo-chen.github.io/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://shibo-chen.github.io/tags/"
-                />
-  </url><url>
     <loc>https://shibo-chen.github.io/tags/taoism/</loc>
     <lastmod>2026-03-29T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -130,19 +208,6 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://shibo-chen.github.io/blog/motorcycle-and-zen/"
-                />
-  </url><url>
-    <loc>https://shibo-chen.github.io/categories/thinking/</loc>
-    <lastmod>2026-03-29T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-Hans"
-                href="https://shibo-chen.github.io/zh/categories/thinking/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://shibo-chen.github.io/categories/thinking/"
                 />
   </url><url>
     <loc>https://shibo-chen.github.io/tags/zen/</loc>
