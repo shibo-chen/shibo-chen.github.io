@@ -797,6 +797,18 @@
   </url><url>
     <loc>https://shibo-chen.github.io/zh/authors/</loc>
   </url><url>
+    <loc>https://shibo-chen.github.io/zh/subscribe/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://shibo-chen.github.io/subscribe/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://shibo-chen.github.io/zh/subscribe/"
+                />
+  </url><url>
     <loc>https://shibo-chen.github.io/zh/authors/admin/</loc>
   </url>
 </urlset>

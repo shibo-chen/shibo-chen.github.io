@@ -798,5 +798,15 @@
     <loc>https://shibo-chen.github.io/search/</loc>
   </url><url>
     <loc>https://shibo-chen.github.io/subscribe/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-Hans"
+                href="https://shibo-chen.github.io/zh/subscribe/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://shibo-chen.github.io/subscribe/"
+                />
   </url>
 </urlset>

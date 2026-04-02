@@ -116,5 +116,12 @@
       <guid>https://shibo-chen.github.io/zh/publication/erickson-commpact-2018/</guid>
       <description></description>
     </item>
+    <item>
+      <title>RSS 订阅</title>
+      <link>https://shibo-chen.github.io/zh/subscribe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://shibo-chen.github.io/zh/subscribe/</guid>
+      <description>通过 RSS 阅读器订阅 Shibo Chen 的新文章。</description>
+    </item>
   </channel>
 </rss>
