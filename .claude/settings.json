@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(hugo --destination /home/chshibo/shibo-chen.github.io)",
-      "WebSearch"
-    ]
-  }
-}
