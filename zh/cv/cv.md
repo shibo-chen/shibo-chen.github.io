@@ -37,7 +37,7 @@ Santa Clara, CA
 
 *高级架构师*
 
-- AI NoC：主笔 chiplet SoC 的 non-coherent NoC spec，并和第三方 IP 厂商对接。
+- AI NoC：负责 chiplet SoC 的 non-coherent NoC spec，并和第三方 IP 厂商对接。
 - AI NoC 建模：搭建 cycle-accurate NoC 模拟器，用 RTL 校准，支撑下一代 NoC 的方案评估。
 - Fabric 生成：开发 AXI fabric 生成器，自动产出 RTL、寄存器映射、IP-XACT 和形式验证检查，已被 SoC 团队采用。
 - Coherent fabric：开发自研 CHI fabric 的生成器和形式验证环境，并和 CPU cluster 集成到 SoC。
