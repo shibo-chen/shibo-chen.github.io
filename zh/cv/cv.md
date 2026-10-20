@@ -1,23 +1,25 @@
 # 陈士博
 
-资深架构师 | Chiplet AI 加速器系统、NoC 与 D2D 互连、内存子系统架构
+资深架构师 | Chiplet NoC、coherent fabric、内存子系统、性能建模与 AI 辅助硬件设计
 
 Santa Clara, CA  
 [chshibo@outlook.com](mailto:chshibo@outlook.com) | [https://shibo-chen.github.io/](https://shibo-chen.github.io/) | [LinkedIn](https://www.linkedin.com/in/shibo-chen-1314741b4/) | [GitHub](https://github.com/shibo-chen)
 
 ## 简介
 
-- Tenstorrent 资深架构师，专注于 Chiplet AI/ML 加速器系统、可扩展片上与片间互连，以及内存子系统架构。
-- 专长覆盖 NoC 与 D2D 架构、非一致性互连、AXI/CHI/PCIe fabric，以及 LPDDR/DDR 内存子系统；在需要时使用性能分析辅助架构决策。
+- Tenstorrent 资深架构师，工作横跨 chiplet AI/ML 加速器和 RISC-V CPU SoC。
+- 专长覆盖 non-coherent 与 coherent（CHI）NoC、D2D 互连、AXI/PCIe fabric，以及 GDDR/LPDDR 内存子系统，用和 RTL 校准过的性能模型支撑架构决策。
 - 擅长通过清晰的模型和跨团队 debug 闭环推动架构落地，聚焦吞吐、时延、利用率、功耗与面积等关键指标。
+- 开发 fabric 生成器、可执行 spec 和形式验证检查，把架构直接落到经过验证的 RTL。
 
 ## 核心技能
 
 - AI 加速器架构：Chiplet AI/ML 加速器系统、系统级权衡分析、性能目标收敛
-- NoC 与互连：非一致性 NoC、封装内 D2D、routing、QoS、topology、clocking、可观测性、RAS/debuggability
+- NoC 与互连：non-coherent 与 coherent（CHI）NoC、封装内 D2D、routing、QoS、topology、clocking、可观测性、RAS/debuggability
 - 标准与 Fabric：AXI、CHI、PCIe、cache/fabric 集成、异构 SoC 连接
-- 内存系统：LPDDR/DDR 控制器、内存通道规划、地址交织、带宽分析、瓶颈消除
-- 分析与建模：性能模型、模拟器、工作负载表征、时延/带宽/利用率分析
+- 内存系统：GDDR/LPDDR/DDR 控制器、内存通道规划、地址交织、带宽分析、瓶颈消除
+- 分析与建模：和 RTL 校准的性能模型、cycle-accurate 模拟器、工作负载表征、时延/带宽/利用率分析
+- 设计自动化与验证：fabric RTL 生成器、可执行 spec、形式验证、AI 辅助 RTL
 - 推进与落地：架构规格、设计评审、RTL/PD/验证/软件联合调试、跨团队技术推动
 
 ## 经历
@@ -92,15 +94,20 @@ Santa Clara, CA
 - ASP-DAC 2025
 - 在一类加速器上实现最高 8x 加速，逻辑开销 4.3%；在另一类加速器上实现 1.5x 加速，逻辑开销 0.9%。
 
+`2023`  
+**Security Verification of Low-Trust Architectures**
+
+- CCS 2023，Distinguished Paper Award
+
 `2022`  
 **Twine: A Chisel Extension for Component-Level Heterogeneous Design**
 
 - DATE 2022
 - 提出面向异构系统组件级组合的硬件设计方法。
 
-`2023`  
-**Security Verification of Low-Trust Architectures**
+## 学术服务
 
-- CCS 2023，Distinguished Paper Award
+- ICCD 2025（IEEE International Conference on Computer Design）程序委员会委员
+- CAMS 2025（Workshop on Computer Architecture Modeling and Simulation）程序委员会委员
 
-最近更新：2026年3月
+最近更新：2026年10月

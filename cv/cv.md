@@ -1,23 +1,25 @@
 # Shibo Chen
 
-Staff Architect | Chiplet-based AI accelerators, NoC and D2D interconnects, and memory-system architecture
+Staff Architect | Chiplet NoCs, coherent fabrics, memory systems, performance modeling, and AI-assisted hardware design
 
 Santa Clara, CA  
 [chshibo@outlook.com](mailto:chshibo@outlook.com) | [https://shibo-chen.github.io/](https://shibo-chen.github.io/) | [LinkedIn](https://www.linkedin.com/in/shibo-chen-1314741b4/) | [GitHub](https://github.com/shibo-chen)
 
 ## Summary
 
-- Staff Architect at Tenstorrent focused on chiplet-based AI/ML accelerator systems, scalable fabrics, and memory-system architecture.
-- Expertise in NoC and D2D architecture, non-coherent interconnects, AXI/CHI/PCIe fabrics, and LPDDR/DDR memory systems, with selective use of performance modeling to drive decisions.
+- Staff Architect at Tenstorrent, working across chiplet-based AI/ML accelerators and RISC-V CPU SoCs.
+- Expertise in non-coherent and coherent (CHI) NoCs, D2D links, AXI/PCIe fabrics, and GDDR/LPDDR memory systems, backed by performance models correlated with RTL.
 - Known for driving architecture decisions with clear models, tight cross-functional debug loops, and measurable focus on throughput, latency, utilization, power, and area.
+- Builds fabric generators, executable specs, and formal checks that turn architecture into verified RTL.
 
 ## Core Skills
 
 - AI Accelerator Architecture: chiplet-based AI/ML accelerator systems, system tradeoff analysis, performance target closure
-- NoC and Interconnects: non-coherent NoC, on-package D2D, routing, QoS, topology, clocking, observability, RAS/debuggability
+- NoC and Interconnects: non-coherent and coherent (CHI) NoCs, on-package D2D, routing, QoS, topology, clocking, observability, RAS/debuggability
 - Standards and Fabrics: AXI, CHI, PCIe, cache and fabric integration, heterogeneous SoC connectivity
-- Memory Systems: LPDDR/DDR controllers, memory-channel sizing, interleaving, bandwidth analysis, bottleneck removal
-- Modeling and Analysis: performance models, simulators, workload characterization, latency/bandwidth/utilization studies
+- Memory Systems: GDDR/LPDDR/DDR controllers, memory-channel sizing, interleaving, bandwidth analysis, bottleneck removal
+- Modeling and Analysis: performance models correlated with RTL, cycle-accurate simulators, workload characterization, latency/bandwidth/utilization studies
+- Design Automation and Verification: fabric RTL generators, executable specifications, formal verification, AI-assisted RTL
 - Execution: architecture specifications, design reviews, RTL/PD/verification/software debug, cross-team technical leadership
 
 ## Experience
@@ -92,15 +94,20 @@ Santa Clara, CA
 - ASP-DAC 2025
 - Demonstrated up to 8x speedup for one accelerator with 4.3% logic overhead, and 1.5x speedup for another with 0.9% overhead.
 
+`2023`  
+**Security Verification of Low-Trust Architectures**
+
+- CCS 2023, Distinguished Paper Award
+
 `2022`  
 **Twine: A Chisel Extension for Component-Level Heterogeneous Design**
 
 - DATE 2022
 - Introduced a hardware-design methodology for composing heterogeneous systems at the component level.
 
-`2023`  
-**Security Verification of Low-Trust Architectures**
+## Service
 
-- CCS 2023, Distinguished Paper Award
+- Program Committee Member, IEEE International Conference on Computer Design (ICCD 2025)
+- Program Committee Member, Workshop on Computer Architecture Modeling and Simulation (CAMS 2025)
 
-Last updated: March 2026
+Last updated: October 2026

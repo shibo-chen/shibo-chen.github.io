@@ -10,7 +10,7 @@
   <div id="main">
     <div id="content">
       <h1 id="shibo-chen">陈士博</h1>
-      <p>资深架构师 | Chiplet AI 加速器系统、NoC 与 D2D 互连、内存子系统架构</p>
+      <p>资深架构师 | Chiplet NoC、coherent fabric、内存子系统、性能建模与 AI 辅助硬件设计</p>
       <div id="webaddress">Santa Clara, CA</div>
       <div id="webaddress">
         <a href="mailto:chshibo@outlook.com">chshibo@outlook.com</a>
@@ -21,18 +21,20 @@
 
       <h2 id="summary">简介</h2>
       <ul>
-        <li>Tenstorrent 资深架构师，专注于 Chiplet AI/ML 加速器系统、可扩展片上与片间互连，以及内存子系统架构。</li>
-        <li>专长覆盖 NoC 与 D2D 架构、非一致性互连、AXI/CHI/PCIe fabric，以及 LPDDR/DDR 内存子系统；在需要时使用性能分析辅助架构决策。</li>
+        <li>Tenstorrent 资深架构师，工作横跨 chiplet AI/ML 加速器和 RISC-V CPU SoC。</li>
+        <li>专长覆盖 non-coherent 与 coherent（CHI）NoC、D2D 互连、AXI/PCIe fabric，以及 GDDR/LPDDR 内存子系统，用和 RTL 校准过的性能模型支撑架构决策。</li>
         <li>擅长通过清晰的模型和跨团队 debug 闭环推动架构落地，聚焦吞吐、时延、利用率、功耗与面积等关键指标。</li>
+        <li>开发 fabric 生成器、可执行 spec 和形式验证检查，把架构直接落到经过验证的 RTL。</li>
       </ul>
 
       <h2 id="core-skills">核心技能</h2>
       <ul>
         <li><strong>AI 加速器架构：</strong>Chiplet AI/ML 加速器系统、系统级权衡分析、性能目标收敛</li>
-        <li><strong>NoC 与互连：</strong>非一致性 NoC、封装内 D2D、routing、QoS、topology、clocking、可观测性、RAS/debuggability</li>
+        <li><strong>NoC 与互连：</strong>non-coherent 与 coherent（CHI）NoC、封装内 D2D、routing、QoS、topology、clocking、可观测性、RAS/debuggability</li>
         <li><strong>标准与 Fabric：</strong>AXI、CHI、PCIe、cache/fabric 集成、异构 SoC 连接</li>
-        <li><strong>内存系统：</strong>LPDDR/DDR 控制器、内存通道规划、地址交织、带宽分析、瓶颈消除</li>
-        <li><strong>分析与建模：</strong>性能模型、模拟器、工作负载表征、时延/带宽/利用率分析</li>
+        <li><strong>内存系统：</strong>GDDR/LPDDR/DDR 控制器、内存通道规划、地址交织、带宽分析、瓶颈消除</li>
+        <li><strong>分析与建模：</strong>和 RTL 校准的性能模型、cycle-accurate 模拟器、工作负载表征、时延/带宽/利用率分析</li>
+        <li><strong>设计自动化与验证：</strong>fabric RTL 生成器、可执行 spec、形式验证、AI 辅助 RTL</li>
         <li><strong>推进与落地：</strong>架构规格、设计评审、RTL/PD/验证/软件联合调试、跨团队技术推动</li>
       </ul>
 
@@ -107,6 +109,12 @@
         <li>在一类加速器上实现最高 8x 加速，逻辑开销 4.3%；在另一类加速器上实现 1.5x 加速，逻辑开销 0.9%。</li>
       </ul>
 
+      <p><code>2023</code>
+      <strong>Security Verification of Low-Trust Architectures</strong></p>
+      <ul>
+        <li>CCS 2023，Distinguished Paper Award</li>
+      </ul>
+
       <p><code>2022</code>
       <strong>Twine: A Chisel Extension for Component-Level Heterogeneous Design</strong></p>
       <ul>
@@ -114,13 +122,13 @@
         <li>提出面向异构系统组件级组合的硬件设计方法。</li>
       </ul>
 
-      <p><code>2023</code>
-      <strong>Security Verification of Low-Trust Architectures</strong></p>
+      <h2 id="service">学术服务</h2>
       <ul>
-        <li>CCS 2023，Distinguished Paper Award</li>
+        <li>ICCD 2025（IEEE International Conference on Computer Design）程序委员会委员</li>
+        <li>CAMS 2025（Workshop on Computer Architecture Modeling and Simulation）程序委员会委员</li>
       </ul>
 
-      <p>最近更新：2026年3月</p>
+      <p>最近更新：2026年10月</p>
     </div>
   </div>
 </body>
