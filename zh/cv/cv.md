@@ -27,20 +27,20 @@ Santa Clara, CA
 
 *资深架构师*
 
-- 主导 Chiplet AI/ML 加速器的 NoC 架构方向，从权衡研究到架构决策。
-- 推动可执行规格方法论：以代码编写规格，生成参考模型、RTL 与形式化检查。
-- 指导架构师与实习生；协调建模、RTL 与验证团队。
+- 负责 chiplet AI/ML 加速器的 NoC 架构方向，从 trade-off 分析一路推到最终决策。
+- 推广“可执行 spec”：用代码写 spec，直接生成 golden model、RTL 和形式验证检查。
+- 带架构师和实习生，打通建模、RTL、验证几个团队的协作。
 
 `2025年5月 - 2026年10月`  
 **Tenstorrent, Santa Clara, CA**
 
 *高级架构师*
 
-- 负责 Chiplet SoC 的 NoC 规格：地址交织、遥测、电源域，并与第三方 IP 对齐。
-- 搭建 cycle-accurate NoC 模型，并与 RTL 和 AI 工作负载对齐。
-- 建模 D2D 通路与内存子系统（LLC 策略、LPDDR 带宽）。
-- 开发互连 RTL 生成器；规格评审发现数十个 CHI 协议 bug。
-- 主导 NoC、D2D、AXI/CHI/PCIe 与 LPDDR/DDR 架构评审。
+- 主笔 chiplet SoC 的 NoC spec，覆盖地址交织、telemetry 和电源域，并和第三方 IP 厂商对接。
+- 搭建 cycle-accurate NoC 性能模型，用 RTL 和真实 AI workload 校准。
+- 做 D2D 通路和内存子系统的建模分析，包括 LLC 分配策略和 LPDDR 带宽。
+- 开发互连 RTL 生成器；按 spec 逐条评审，挖出几十个 CHI 协议 bug。
+- 主持 NoC、D2D、AXI/CHI/PCIe 和 LPDDR/DDR 相关的架构评审。
 
 `2023年5月 - 2023年8月`  
 **Tenstorrent, Santa Clara, CA**
