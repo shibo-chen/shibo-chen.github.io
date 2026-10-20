@@ -1,9 +1,14 @@
 # Shibo Chen
 
-Staff Architect | Chiplet NoCs, coherent fabrics, memory systems, performance modeling, and AI-assisted hardware design
+Staff Architect \| Chiplet NoCs, coherent fabrics, memory systems, performance modeling, and AI-assisted hardware design
 
-Santa Clara, CA  
-[chshibo@outlook.com](mailto:chshibo@outlook.com) | [https://shibo-chen.github.io/](https://shibo-chen.github.io/) | [LinkedIn](https://www.linkedin.com/in/shibo-chen-1314741b4/) | [GitHub](https://github.com/shibo-chen)
+<div id="webaddress">Santa Clara, CA</div>
+<div id="webaddress">
+<a href="mailto:chshibo@outlook.com">chshibo@outlook.com</a>
+| <a href="https://shibo-chen.github.io/">https://shibo-chen.github.io/</a>
+| <a href="https://www.linkedin.com/in/shibo-chen-1314741b4/">LinkedIn</a>
+| <a href="https://github.com/shibo-chen">GitHub</a>
+</div>
 
 ## Summary
 
