@@ -27,8 +27,9 @@ Santa Clara, CA
 
 *Staff Architect*
 
-- Set NoC architecture direction for chiplet-based AI/ML accelerators, from trade-off studies to decisions.
-- Drive an executable-spec methodology: specs as code that generate golden models, RTL, and formal checks.
+- Lead the in-house coherent fabric (CHI): transport, chip-to-chip links, and SoC integration.
+- Lead AI-assisted hardware design: executable specs that generate golden models, RTL, and formal checks.
+- Set performance-modeling direction across the AI NoC and the coherent CPU fabric.
 - Mentor architects and interns; align modeling, RTL, and verification teams.
 
 `May 2025 - Oct 2026`  
@@ -36,11 +37,12 @@ Santa Clara, CA
 
 *Senior Architect*
 
-- Owned NoC specs for chiplet SoCs: interleaving, telemetry, power domains, and third-party IP alignment.
-- Built a cycle-accurate NoC model; correlated it with RTL and AI workloads.
-- Modeled D2D paths and memory systems (LLC policy, LPDDR bandwidth).
-- Built fabric RTL generators; spec reviews found dozens of CHI protocol bugs.
-- Led NoC, D2D, AXI/CHI/PCIe, and LPDDR/DDR architecture reviews.
+- AI NoC: owned the non-coherent NoC spec for a chiplet SoC and aligned it with third-party IP.
+- AI NoC modeling: built a cycle-accurate NoC simulator, correlated it with RTL, and used it for next-generation NoC studies.
+- Fabric generation: built an AXI fabric generator (RTL, register maps, IP-XACT, formal checks) adopted by SoC teams.
+- Coherent fabric: built the in-house CHI fabric's generator and formal environment, and integrated it with CPU clusters.
+- Coherent modeling: studied SLC and home-node policies for multicore CPU scaling.
+- RISC-V ACLINT: generated RTL from an executable spec and checked it formally against the golden model.
 
 `May 2023 - August 2023`  
 **Tenstorrent, Santa Clara, CA**

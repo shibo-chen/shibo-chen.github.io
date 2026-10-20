@@ -27,8 +27,9 @@ Santa Clara, CA
 
 *资深架构师*
 
-- 负责 chiplet AI/ML 加速器的 NoC 架构方向，从 trade-off 分析一路推到最终决策。
-- 推广“可执行 spec”：用代码写 spec，直接生成 golden model、RTL 和形式验证检查。
+- 牵头自研 coherent fabric（CHI）：transport、chip-to-chip 互连和 SoC 集成。
+- 牵头 AI 辅助硬件设计：用可执行 spec 直接生成 golden model、RTL 和形式验证检查。
+- 把握 AI NoC 和 CPU coherent fabric 两条线的性能建模方向。
 - 带架构师和实习生，打通建模、RTL、验证几个团队的协作。
 
 `2025年5月 - 2026年10月`  
@@ -36,11 +37,12 @@ Santa Clara, CA
 
 *高级架构师*
 
-- 主笔 chiplet SoC 的 NoC spec，覆盖地址交织、telemetry 和电源域，并和第三方 IP 厂商对接。
-- 搭建 cycle-accurate NoC 性能模型，用 RTL 和真实 AI workload 校准。
-- 做 D2D 通路和内存子系统的建模分析，包括 LLC 分配策略和 LPDDR 带宽。
-- 开发互连 RTL 生成器；按 spec 逐条评审，挖出几十个 CHI 协议 bug。
-- 主持 NoC、D2D、AXI/CHI/PCIe 和 LPDDR/DDR 相关的架构评审。
+- AI NoC：主笔 chiplet SoC 的 non-coherent NoC spec，并和第三方 IP 厂商对接。
+- AI NoC 建模：搭建 cycle-accurate NoC 模拟器，用 RTL 校准，支撑下一代 NoC 的方案评估。
+- Fabric 生成：开发 AXI fabric 生成器，自动产出 RTL、寄存器映射、IP-XACT 和形式验证检查，已被 SoC 团队采用。
+- Coherent fabric：开发自研 CHI fabric 的生成器和形式验证环境，并和 CPU cluster 集成到 SoC。
+- Coherent 建模：围绕多核 CPU 扩展，分析 SLC 和 home node 策略。
+- RISC-V ACLINT：从可执行 spec 生成 RTL，并和 golden model 做形式验证比对。
 
 `2023年5月 - 2023年8月`  
 **Tenstorrent, Santa Clara, CA**

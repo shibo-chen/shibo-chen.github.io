@@ -2,8 +2,9 @@
 &lt;h3 id="资深架构师--tenstorrent-inc"&gt;资深架构师 — Tenstorrent Inc&lt;/h3&gt;
 &lt;p&gt;加利福尼亚州圣克拉拉 · 2026年10月 – 至今&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;负责 chiplet AI/ML 加速器的 NoC 架构方向，从 trade-off 分析一路推到最终决策。&lt;/li&gt;
-&lt;li&gt;推广“可执行 spec”：用代码写 spec，直接生成 golden model、RTL 和形式验证检查。&lt;/li&gt;
+&lt;li&gt;牵头自研 coherent fabric（CHI）：transport、chip-to-chip 互连和 SoC 集成。&lt;/li&gt;
+&lt;li&gt;牵头 AI 辅助硬件设计：用可执行 spec 直接生成 golden model、RTL 和形式验证检查。&lt;/li&gt;
+&lt;li&gt;把握 AI NoC 和 CPU coherent fabric 两条线的性能建模方向。&lt;/li&gt;
 &lt;li&gt;带架构师和实习生，打通建模、RTL、验证几个团队的协作。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
