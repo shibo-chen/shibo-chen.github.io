@@ -34,7 +34,8 @@
 
 *资深架构师*
 
-- 牵头自研 coherent fabric（CHI）：transport、chip-to-chip 互连和 SoC 集成。
+- 牵头自研 coherent fabric（CHI）：transport、chip-to-chip 互连和生成器。
+- 担任 RISC-V CPU chiplet SoC 的 fabric 负责人：集成 CPU cluster、coherent fabric、IOMMU、timer 和 AI 计算引擎，固件已能在仿真中端到端跑通。
 - 牵头 AI 辅助硬件设计：用可执行 spec 直接生成 golden model、RTL 和形式验证检查。
 - 把握 AI NoC 和 CPU coherent fabric 两条线的性能建模方向。
 - 带架构师和实习生，打通建模、RTL、验证几个团队的协作。
@@ -50,6 +51,7 @@
 - 第三方 IP：主持商用 NoC 和内存 IP 的设计评审与评估，把厂商模型接入内部仿真。
 - 性能建模：覆盖 CPU 多核扩展和 SLC 策略、AI 加速器模型的 RTL 校准，以及 cycle-accurate NoC 模拟器。
 - Fabric 生成器：开发 AXI fabric 生成器（已被 SoC 团队采用），以及自研 CHI fabric 的生成器和形式验证环境。
+- Spec 平台：开发内部 spec 服务，负责架构 spec 的构建、托管和评审（在线编辑、评论、AI 评审），已用于多个芯片项目的 spec sign-off。
 - RISC-V ACLINT：从可执行 spec 生成 RTL，并和 golden model 做形式验证比对。
 - 招聘与校企合作：搭建面试框架、参与面试，支持高校研究合作。
 

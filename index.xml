@@ -2,7 +2,8 @@
 &lt;h3 id="staff-architect--tenstorrent-inc"&gt;Staff Architect — Tenstorrent Inc&lt;/h3&gt;
 &lt;p&gt;Santa Clara, California · Oct 2026 – Present&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Lead the in-house coherent fabric (CHI): transport, chip-to-chip links, and SoC integration.&lt;/li&gt;
+&lt;li&gt;Lead the in-house coherent fabric (CHI): transport, chip-to-chip links, and generators.&lt;/li&gt;
+&lt;li&gt;Fabric lead for a RISC-V CPU chiplet SoC: integrate CPU clusters, the coherent fabric, IOMMU, timers, and an AI compute engine; firmware runs end to end in simulation.&lt;/li&gt;
 &lt;li&gt;Lead AI-assisted hardware design: executable specs that generate golden models, RTL, and formal checks.&lt;/li&gt;
 &lt;li&gt;Set performance-modeling direction across the AI NoC and the coherent CPU fabric.&lt;/li&gt;
 &lt;li&gt;Mentor architects and interns; align modeling, RTL, and verification teams.&lt;/li&gt;
