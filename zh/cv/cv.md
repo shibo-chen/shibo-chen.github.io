@@ -37,9 +37,9 @@ Santa Clara, CA
 
 *高级架构师*
 
-- Chiplet NoC spec：负责 IO chiplet 和 LPDDR chiplet 的 non-coherent NoC spec，包括拓扑、地址映射、交织和 KPI。
+- Chiplet NoC spec：负责 IO chiplet 和 LPDDR chiplet 的 non-coherent NoC spec，包括拓扑、地址映射、交织粒度、KPI 和 LPDDR 控制器位宽。
 - NoC RTL 与 debug：在 IO chiplet fabric 上集成 trace、remap 和 timeout 功能；定位 head-of-line blocking，把带宽拉到目标。
-- 内存子系统：推动 GDDR chiplet 的 bring-up 和带宽分析，确定 LPDDR 控制器位宽和交织粒度。
+- GDDR chiplet：推动 bring-up、性能分析和 debug，包括带宽校准、非对齐访问优化，以及 telemetry 和 timeout 验证。
 - 第三方 IP：主持商用 NoC 和内存 IP 的设计评审与评估，把厂商模型接入内部仿真。
 - 性能建模：覆盖 CPU 多核扩展和 SLC 策略、AI 加速器模型的 RTL 校准，以及 cycle-accurate NoC 模拟器。
 - Fabric 生成器：开发 AXI fabric 生成器（已被 SoC 团队采用），以及自研 CHI fabric 的生成器和形式验证环境。

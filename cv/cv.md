@@ -37,9 +37,9 @@ Santa Clara, CA
 
 *Senior Architect*
 
-- Chiplet NoC specs: owned non-coherent NoC specs for IO and LPDDR chiplets (topology, address maps, interleaving, KPIs).
+- Chiplet NoC specs: owned non-coherent NoC specs for IO and LPDDR chiplets (topology, address maps, interleaving, KPIs, LPDDR controller width).
 - NoC RTL and debug: integrated trace, remap, and timeout features in an IO-chiplet fabric; fixed head-of-line blocking to meet bandwidth targets.
-- Memory systems: drove GDDR chiplet bring-up and bandwidth studies; sized LPDDR controllers and interleaving.
+- GDDR chiplet: drove bring-up, performance analysis, and debug: bandwidth correlation, unaligned-access fixes, and telemetry and timeout checks.
 - Third-party IP: ran design reviews and evaluations of commercial NoC and memory IP; wrapped vendor models for in-house simulation.
 - Performance modeling: CPU multicore scaling and SLC policies, AI-accelerator models correlated with RTL, and a cycle-accurate NoC simulator.
 - Fabric generators: built an AXI fabric generator adopted by SoC teams, and the in-house CHI fabric's generator and formal environment.
