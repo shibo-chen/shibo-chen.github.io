@@ -1,13 +1,13 @@
 # 陈士博
 
-高级架构师 | Chiplet AI 加速器系统、NoC 与 D2D 互连、内存子系统架构
+资深架构师 | Chiplet AI 加速器系统、NoC 与 D2D 互连、内存子系统架构
 
 Santa Clara, CA  
 [chshibo@outlook.com](mailto:chshibo@outlook.com) | [https://shibo-chen.github.io/](https://shibo-chen.github.io/) | [LinkedIn](https://www.linkedin.com/in/shibo-chen-1314741b4/) | [GitHub](https://github.com/shibo-chen)
 
 ## 简介
 
-- Tenstorrent 高级架构师，专注于 Chiplet AI/ML 加速器系统、可扩展片上与片间互连，以及内存子系统架构。
+- Tenstorrent 资深架构师，专注于 Chiplet AI/ML 加速器系统、可扩展片上与片间互连，以及内存子系统架构。
 - 专长覆盖 NoC 与 D2D 架构、非一致性互连、AXI/CHI/PCIe fabric，以及 LPDDR/DDR 内存子系统；在需要时使用性能分析辅助架构决策。
 - 擅长通过清晰的模型和跨团队 debug 闭环推动架构落地，聚焦吞吐、时延、利用率、功耗与面积等关键指标。
 
@@ -25,7 +25,8 @@ Santa Clara, CA
 `2025年5月 - 至今`  
 **Tenstorrent, Santa Clara, CA**
 
-*高级架构师*
+*资深架构师*（2026年10月 - 至今）  
+*高级架构师*（2025年5月 - 2026年10月）
 
 - 负责 Chiplet AI/ML 加速器系统中 GDDR、LPDDR、IO 与 RISC-V CPU chiplet 的 NoC、D2D 与内存子系统架构权衡。
 - 推动 routing、topology、QoS、buffering、clocking 与 debug visibility 等关键决策，收敛吞吐、时延、利用率、功耗与面积目标。

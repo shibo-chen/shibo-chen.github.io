@@ -1,13 +1,13 @@
 # Shibo Chen
 
-Senior Architect | Chiplet-based AI accelerators, NoC and D2D interconnects, and memory-system architecture
+Staff Architect | Chiplet-based AI accelerators, NoC and D2D interconnects, and memory-system architecture
 
 Santa Clara, CA  
 [chshibo@outlook.com](mailto:chshibo@outlook.com) | [https://shibo-chen.github.io/](https://shibo-chen.github.io/) | [LinkedIn](https://www.linkedin.com/in/shibo-chen-1314741b4/) | [GitHub](https://github.com/shibo-chen)
 
 ## Summary
 
-- Senior Architect at Tenstorrent focused on chiplet-based AI/ML accelerator systems, scalable fabrics, and memory-system architecture.
+- Staff Architect at Tenstorrent focused on chiplet-based AI/ML accelerator systems, scalable fabrics, and memory-system architecture.
 - Expertise in NoC and D2D architecture, non-coherent interconnects, AXI/CHI/PCIe fabrics, and LPDDR/DDR memory systems, with selective use of performance modeling to drive decisions.
 - Known for driving architecture decisions with clear models, tight cross-functional debug loops, and measurable focus on throughput, latency, utilization, power, and area.
 
@@ -25,7 +25,8 @@ Santa Clara, CA
 `May 2025 - Present`  
 **Tenstorrent, Santa Clara, CA**
 
-*Senior Architect*
+*Staff Architect* (Oct 2026 - Present)  
+*Senior Architect* (May 2025 - Oct 2026)
 
 - Architected NoC, D2D, and memory-system tradeoffs across chiplet-based AI/ML accelerator systems, including GDDR, LPDDR, IO, and RISC-V CPU chiplets.
 - Drove architecture studies across routing, topology, QoS, buffering, clocking, and debug visibility to close throughput, latency, utilization, power, and area targets.
