@@ -22,17 +22,25 @@ Santa Clara, CA
 
 ## 经历
 
-`2025年5月 - 至今`  
+`2026年10月 - 至今`  
 **Tenstorrent, Santa Clara, CA**
 
-*资深架构师*（2026年10月 - 至今）  
-*高级架构师*（2025年5月 - 2026年10月）
+*资深架构师*
 
-- 负责 Chiplet AI/ML 加速器系统中 GDDR、LPDDR、IO 与 RISC-V CPU chiplet 的 NoC、D2D 与内存子系统架构权衡。
-- 推动 routing、topology、QoS、buffering、clocking 与 debug visibility 等关键决策，收敛吞吐、时延、利用率、功耗与面积目标。
-- 定义链路、队列、内存通道和地址交织等架构要求，并在必要时用性能分析支撑关键决策。
-- 联合 RTL、物理设计、验证和软件团队定位性能与功耗瓶颈，把工作负载层问题追溯到互连与内存行为。
-- 主导非一致性 NoC、封装内 chiplet interconnect、AXI/CHI/PCIe fabric 以及 LPDDR/DDR 控制器交互相关的规格与评审。
+- 主导 Chiplet AI/ML 加速器的 NoC 架构方向，从权衡研究到架构决策。
+- 推动可执行规格方法论：以代码编写规格，生成参考模型、RTL 与形式化检查。
+- 指导架构师与实习生；协调建模、RTL 与验证团队。
+
+`2025年5月 - 2026年10月`  
+**Tenstorrent, Santa Clara, CA**
+
+*高级架构师*
+
+- 负责 Chiplet SoC 的 NoC 规格：地址交织、遥测、电源域，并与第三方 IP 对齐。
+- 搭建 cycle-accurate NoC 模型，并与 RTL 和 AI 工作负载对齐。
+- 建模 D2D 通路与内存子系统（LLC 策略、LPDDR 带宽）。
+- 开发互连 RTL 生成器；规格评审发现数十个 CHI 协议 bug。
+- 主导 NoC、D2D、AXI/CHI/PCIe 与 LPDDR/DDR 架构评审。
 
 `2023年5月 - 2023年8月`  
 **Tenstorrent, Santa Clara, CA**

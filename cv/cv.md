@@ -22,17 +22,25 @@ Santa Clara, CA
 
 ## Experience
 
-`May 2025 - Present`  
+`Oct 2026 - Present`  
 **Tenstorrent, Santa Clara, CA**
 
-*Staff Architect* (Oct 2026 - Present)  
-*Senior Architect* (May 2025 - Oct 2026)
+*Staff Architect*
 
-- Architected NoC, D2D, and memory-system tradeoffs across chiplet-based AI/ML accelerator systems, including GDDR, LPDDR, IO, and RISC-V CPU chiplets.
-- Drove architecture studies across routing, topology, QoS, buffering, clocking, and debug visibility to close throughput, latency, utilization, power, and area targets.
-- Defined architecture requirements for links, queues, memory channels, and address interleaving policies, using performance analysis where it materially improved decisions.
-- Debugged performance and power bottlenecks with RTL, physical design, verification, and software teams, tracing workload-level issues back to fabric and memory behavior.
-- Led architecture reviews and specification work spanning non-coherent NoCs, on-package chiplet interconnects, AXI/CHI/PCIe fabrics, and LPDDR/DDR controller interactions.
+- Set NoC architecture direction for chiplet-based AI/ML accelerators, from trade-off studies to decisions.
+- Drive an executable-spec methodology: specs as code that generate golden models, RTL, and formal checks.
+- Mentor architects and interns; align modeling, RTL, and verification teams.
+
+`May 2025 - Oct 2026`  
+**Tenstorrent, Santa Clara, CA**
+
+*Senior Architect*
+
+- Owned NoC specs for chiplet SoCs: interleaving, telemetry, power domains, and third-party IP alignment.
+- Built a cycle-accurate NoC model; correlated it with RTL and AI workloads.
+- Modeled D2D paths and memory systems (LLC policy, LPDDR bandwidth).
+- Built fabric RTL generators; spec reviews found dozens of CHI protocol bugs.
+- Led NoC, D2D, AXI/CHI/PCIe, and LPDDR/DDR architecture reviews.
 
 `May 2023 - August 2023`  
 **Tenstorrent, Santa Clara, CA**
