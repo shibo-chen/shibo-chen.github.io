@@ -1,0 +1,46 @@
+name: BQ 每日日志 / Daily journal
+description: 填写训练、饮食、睡眠，提交后自动显示在网站的 BQ Journal。
+title: "[BQ Journal] 每日记录"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 每天几分钟，记下通往 BQ 的一天
+        提交后内容公开，并自动显示在 [BQ 日志](https://shibo-chen.github.io/zh/journal/)。请使用 shibo-chen 账号提交。
+        标题可以保持默认。日期请填 YYYY-MM-DD；其余内容写中文或英文均可。之后可编辑本条记录来更正。
+  - type: input
+    id: date
+    attributes:
+      label: 日期 / Date
+      description: 按当天所在地的日期填写，也可以补记过去的日期。
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: input
+    id: headline
+    attributes:
+      label: 一句话 / Headline
+      placeholder: 今天最想记住的事（可选）
+  - type: textarea
+    id: training
+    attributes:
+      label: 训练 / Training
+      description: 今天跑了什么？休息日也可以直接写休息。
+      placeholder: 训练类型、距离、用时或配速、心率、主观强度、身体感受。
+    validations:
+      required: true
+  - type: textarea
+    id: food
+    attributes:
+      label: 饮食 / Food
+      placeholder: 三餐、跑前跑后补给、饮水，以及想记下的饮食感受。
+  - type: textarea
+    id: sleep
+    attributes:
+      label: 睡眠 / Sleep
+      placeholder: 昨晚几点睡、几点起、睡了多久、质量怎样、有无午睡。
+  - type: textarea
+    id: reflections
+    attributes:
+      label: 感受 / Reflections
+      placeholder: 今天的状态、压力、一个小进步，或者明天想调整的事。
