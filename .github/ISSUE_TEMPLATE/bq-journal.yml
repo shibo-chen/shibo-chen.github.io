@@ -17,6 +17,12 @@ body:
     validations:
       required: true
   - type: input
+    id: weight
+    attributes:
+      label: 体重 / Weight (kg)
+      description: 可选，填数字即可；会自动更新体重趋势。
+      placeholder: "例如 75.2"
+  - type: input
     id: headline
     attributes:
       label: 一句话 / Headline

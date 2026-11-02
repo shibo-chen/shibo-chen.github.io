@@ -1,5 +1,6 @@
 import { REPOSITORY, FIELDS, parseEntry, dailyEntries } from './journal-data.mjs';
 import { DISTANCES, REFERENCE_BQ_SECONDS, formatTime, personalBests } from './journal-pb.mjs';
+import { parseWeight, weightRecords, weightChart } from './journal-weight.mjs';
 
 const root = document.querySelector('[data-journal]');
 if (root) {
@@ -71,6 +72,59 @@ if (root) {
     const baselineNode = document.getElementById('journal-pb-baseline');
     const baselines = baselineNode ? JSON.parse(baselineNode.textContent) : [];
     const pbStatus = document.getElementById('journal-pb-status');
+    const weightStatus = document.getElementById('journal-weight-status');
+    function renderWeight() {
+      const records = weightRecords(issues);
+      const history = document.getElementById('journal-weight-history');
+      const table = document.getElementById('journal-weights');
+      const chart = document.getElementById('journal-weight-chart');
+      const summary = document.getElementById('journal-weight-summary');
+      history.hidden = chart.hidden = !records.length;
+      chart.replaceChildren();
+      table.replaceChildren();
+      if (!records.length) {
+        summary.textContent = say('还没有体重记录，填入第一条就可以开始。', 'No weight records yet. Add the first one to get started.');
+        return;
+      }
+      const first = records[0];
+      const latest = records.at(-1);
+      const delta = Number((latest.kg - first.kg).toFixed(2));
+      const change = `${delta > 0 ? '+' : ''}${delta} kg`;
+      summary.textContent = say(`最新：${latest.kg} kg（${latest.date}） · 相对首条记录：${change} · 共 ${records.length} 天`,
+        `Latest: ${latest.kg} kg (${latest.date}) · Change since first record: ${change} · ${records.length} days logged`);
+      const svg = (tag, attrs, text) => {
+        const node = document.createElementNS('http://www.w3.org/2000/svg', tag);
+        for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, String(value));
+        if (text) node.textContent = text;
+        return node;
+      };
+      const plot = weightChart(records);
+      chart.append(svg('title', {}, summary.textContent));
+      for (let index = 0; index <= 2; index++) {
+        const y = 24 + index * 74;
+        const kg = plot.max - index / 2 * (plot.max - plot.min);
+        chart.append(svg('line', { x1: 64, x2: 616, y1: y, y2: y, stroke: 'var(--border)' }),
+          svg('text', { x: 56, y: y + 4, 'text-anchor': 'end', fill: 'var(--secondary)', 'font-size': 12 }, `${kg.toFixed(1)}`));
+      }
+      chart.append(svg('text', { x: 10, y: 14, fill: 'var(--secondary)', 'font-size': 12 }, 'kg'),
+        svg('text', { x: 64, y: 204, fill: 'var(--secondary)', 'font-size': 12 }, first.date),
+        svg('text', { x: 616, y: 204, 'text-anchor': 'end', fill: 'var(--secondary)', 'font-size': 12 }, latest.date),
+        svg('polyline', { points: plot.points.map(point => `${point.x},${point.y}`).join(' '), fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2 }));
+      for (const point of plot.points) {
+        const dot = svg('circle', { cx: point.x, cy: point.y, r: 3, fill: 'var(--accent)' });
+        dot.append(svg('title', {}, `${point.date}: ${point.kg} kg`));
+        chart.append(dot);
+      }
+      for (const record of [...records].reverse()) {
+        const row = element('tr');
+        const edit = element('a', say('查看 / 修改 ↗', 'View / edit ↗'));
+        edit.href = originalURL(record.number);
+        const source = element('td');
+        source.append(edit);
+        row.append(element('td', record.date), element('td', String(record.kg)), element('td', record.note || '—'), source);
+        table.append(row);
+      }
+    }
     function renderPB() {
       const table = document.getElementById('journal-pbs');
       const bests = personalBests(issues, baselines);
@@ -118,6 +172,8 @@ if (root) {
         const heading = element('h3');
         heading.textContent = entry.headline || say('每日记录', 'Daily entry');
         const body = element('div', '', 'post-content');
+        const weight = parseWeight(entry.weight);
+        if (weight !== null) body.append(element('p', say(`体重：${weight} kg`, `Weight: ${weight} kg`), 'journal-help'));
         for (const [key, label] of FIELDS) {
           const section = element('section');
           section.append(element('h4', label.split(' / ')[zh ? 0 : 1]),
@@ -131,6 +187,7 @@ if (root) {
       }
       [...list.children].sort((a, b) => b.dataset.date.localeCompare(a.dataset.date)).forEach(node => list.append(node));
       renderPB();
+      renderWeight();
     }
     async function load(reset = false) {
       if (busy) return;
@@ -138,6 +195,7 @@ if (root) {
       refresh.disabled = more.disabled = true;
       status.textContent = say('正在读取最新记录…', 'Loading the latest entries…');
       pbStatus.textContent = say('正在核对全部历史成绩…', 'Checking all historical results…');
+      weightStatus.textContent = say('正在同步体重记录…', 'Syncing weight records…');
       try {
         let next = reset ? 1 : page + 1;
         while (true) {
@@ -151,9 +209,11 @@ if (root) {
           next += 1;
         }
         pbStatus.textContent = say('已核对全部已提交成绩；每个距离显示最快一场。', 'All submitted results checked; fastest result shown for each distance.');
+        weightStatus.textContent = say('体重记录已同步。', 'Weight records are up to date.');
         status.textContent = say('已同步。新提交后点「刷新」即可看到。', 'Up to date. Refresh here after submitting a new entry.');
       } catch {
         pbStatus.textContent = say('未能核对完整历史成绩；当前 PB 可能不完整，请刷新重试。', 'Could not check the full result history; displayed PBs may be incomplete. Refresh to retry.');
+        weightStatus.textContent = say('未能同步全部体重记录；已显示的数据可能不完整，请刷新重试。', 'Could not sync all weight records. Displayed data may be incomplete; refresh to retry.');
         failure(say('暂时无法同步最新记录（网络或访问频率限制）。已显示的记录仍可阅读，请稍后刷新。',
           'Unable to sync new entries (connection or rate limit). Existing entries remain readable; please refresh shortly.'));
       } finally {
