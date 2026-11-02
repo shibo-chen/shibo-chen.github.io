@@ -73,20 +73,23 @@ if (root) {
       const liveDates = new Set(entries.map(entry => entry.date));
       list.querySelectorAll('[data-date]').forEach(node => { node.hidden = liveDates.has(node.dataset.date); });
       for (const entry of entries) {
-        const url = `${root.dataset.entryUrl}?id=${entry.number}`;
         const card = element('article', '', 'journal-card');
         card.dataset.live = 'true';
         card.dataset.date = entry.date;
         const date = element('time', entry.date);
         date.dateTime = entry.date;
         const heading = element('h3');
-        const title = element('a', entry.headline || say('每日记录', 'Daily entry'));
-        title.href = url;
-        heading.append(title);
-        const preview = entry.training.replace(/\s+/g, ' ');
-        const read = element('a', say('阅读记录 →', 'Read entry →'), 'journal-read');
-        read.href = url;
-        card.append(date, heading, element('p', preview.slice(0, 180) + (preview.length > 180 ? '…' : '')), read);
+        heading.textContent = entry.headline || say('每日记录', 'Daily entry');
+        const body = element('div', '', 'post-content');
+        for (const [key, label] of FIELDS) {
+          const section = element('section');
+          section.append(element('h4', label.split(' / ')[zh ? 0 : 1]),
+            element('p', entry[key] || say('未记录。', 'Not recorded.'), 'journal-entry-text'));
+          body.append(section);
+        }
+        const edit = element('a', say('修改这条记录 ↗', 'Edit this entry ↗'), 'journal-source');
+        edit.href = originalURL(entry.number);
+        card.append(date, heading, body, edit);
         list.append(card);
       }
       [...list.children].sort((a, b) => b.dataset.date.localeCompare(a.dataset.date)).forEach(node => list.append(node));
