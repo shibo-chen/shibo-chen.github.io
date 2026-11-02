@@ -1,0 +1,43 @@
+name: PB 个人最好成绩 / Personal best
+description: 记录一场比赛的成绩，网站自动更新 5K、10K、半马或全马 PB。
+title: "[BQ PB] 比赛成绩"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提交后公开，并同步到 [BQ 日志](https://shibo-chen.github.io/zh/journal/) 的 PB 表。请使用 shibo-chen 账号。
+        请填写完整距离的比赛官方净计时。训练中的 GPS 最快片段、配速推算成绩不计入此表。
+        每个距离自动保留最快一场；更新或更正可编辑原记录。PB 不等于 B.A.A. 审核通过的资格成绩。
+  - type: dropdown
+    id: distance
+    attributes:
+      label: 距离 / Distance
+      options:
+        - 5K
+        - 10K
+        - Half marathon
+        - Marathon
+    validations:
+      required: true
+  - type: input
+    id: time
+    attributes:
+      label: 成绩 / Time
+      description: 官方净计时，格式 HH:MM:SS 或 MM:SS。
+      placeholder: "02:58:30"
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: 日期 / Date
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: input
+    id: race
+    attributes:
+      label: 比赛 / Race
+      placeholder: 比赛名称
+    validations:
+      required: true
