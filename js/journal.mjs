@@ -81,11 +81,11 @@ if (root) {
         const label = distance === 'Half marathon' ? say('半马', distance) : distance === 'Marathon' ? say('全马', distance) : distance;
         const heading = element('th', label);
         heading.scope = 'row';
-        const race = element('td', result ? say('比赛待补', 'Race details pending') : say('待记录', 'Not recorded'));
-        if (result?.number) {
+        const race = element('td', result ? (zh && result.raceZh ? result.raceZh : result.race) || say('比赛待补', 'Race details pending') : say('待记录', 'Not recorded'));
+        if (result?.number || result?.sourceURL) {
           race.textContent = '';
-          const link = element('a', result.race);
-          link.href = originalURL(result.number);
+          const link = element('a', zh && result.raceZh ? result.raceZh : result.race);
+          link.href = result.number ? originalURL(result.number) : result.sourceURL;
           race.append(link);
         }
         const displayTime = result ? (result.precisionMinute ? `${formatTime(result.seconds).slice(0, -3)} ${say('（时:分）', '(h:mm)')}` : formatTime(result.seconds)) : '—';
