@@ -39,13 +39,14 @@ export function parsePB(issue) {
   return { number: issue.number, distance, seconds, date, race };
 }
 
-export function personalBests(issues) {
-  const bests = new Map();
+export function personalBests(issues, baselines = []) {
+  const bests = new Map(baselines.map(result => [result.distance, result]));
   for (const issue of issues) {
     const result = parsePB(issue);
     if (!result) continue;
     const previous = bests.get(result.distance);
     if (!previous || result.seconds < previous.seconds ||
+        (previous.precisionMinute && Math.floor(result.seconds / 60) === Math.floor(previous.seconds / 60)) ||
         (result.seconds === previous.seconds && result.date > previous.date)) bests.set(result.distance, result);
   }
   return bests;

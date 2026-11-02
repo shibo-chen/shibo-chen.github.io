@@ -68,10 +68,12 @@ if (root) {
     let page = 0;
     let issues = [];
     let busy = false;
+    const baselineNode = document.getElementById('journal-pb-baseline');
+    const baselines = baselineNode ? JSON.parse(baselineNode.textContent) : [];
     const pbStatus = document.getElementById('journal-pb-status');
     function renderPB() {
       const table = document.getElementById('journal-pbs');
-      const bests = personalBests(issues);
+      const bests = personalBests(issues, baselines);
       table.replaceChildren();
       for (const distance of DISTANCES) {
         const result = bests.get(distance);
@@ -79,13 +81,15 @@ if (root) {
         const label = distance === 'Half marathon' ? say('半马', distance) : distance === 'Marathon' ? say('全马', distance) : distance;
         const heading = element('th', label);
         heading.scope = 'row';
-        const race = element('td', result ? '' : say('待记录', 'Not recorded'));
-        if (result) {
+        const race = element('td', result ? say('比赛待补', 'Race details pending') : say('待记录', 'Not recorded'));
+        if (result?.number) {
+          race.textContent = '';
           const link = element('a', result.race);
           link.href = originalURL(result.number);
           race.append(link);
         }
-        row.append(heading, element('td', result ? formatTime(result.seconds) : '—'), element('td', result?.date || '—'), race);
+        const displayTime = result ? (result.precisionMinute ? `${formatTime(result.seconds).slice(0, -3)} ${say('（时:分）', '(h:mm)')}` : formatTime(result.seconds)) : '—';
+        row.append(heading, element('td', displayTime), element('td', result?.date || '—'), race);
         table.append(row);
       }
       const marathon = bests.get('Marathon');
@@ -93,10 +97,10 @@ if (root) {
       if (marathon) {
         const difference = marathon.seconds - REFERENCE_BQ_SECONDS;
         gap.textContent = difference > 0
-          ? say(`全马 PB 比 2027 年男子 18–34 岁参考标准 2:55:00 慢 ${formatTime(difference)}。`, `Marathon PB is ${formatTime(difference)} slower than the 2027 men's 18–34 reference standard of 2:55:00.`)
+          ? say(`全马 PB 比 2027 年男子 18–34 岁参考标准 2:55:00 慢${marathon.precisionMinute ? '约' : ''} ${formatTime(difference)}。`, `Marathon PB is ${marathon.precisionMinute ? 'approximately ' : ''}${formatTime(difference)} slower than the 2027 men's 18–34 reference standard of 2:55:00.`)
           : difference === 0
             ? say('全马 PB 与 2027 年男子 18–34 岁参考标准 2:55:00 相同。', "Marathon PB equals the 2027 men's 18–34 reference standard of 2:55:00.")
-            : say(`全马 PB 比 2027 年男子 18–34 岁参考标准 2:55:00 快 ${formatTime(-difference)}。`, `Marathon PB is ${formatTime(-difference)} faster than the 2027 men's 18–34 reference standard of 2:55:00.`);
+            : say(`全马 PB 比 2027 年男子 18–34 岁参考标准 2:55:00 快${marathon.precisionMinute ? '约' : ''} ${formatTime(-difference)}。`, `Marathon PB is ${marathon.precisionMinute ? 'approximately ' : ''}${formatTime(-difference)} faster than the 2027 men's 18–34 reference standard of 2:55:00.`);
         gap.textContent += say(' 此处仅比较时间；比赛认证、有效窗口和赛道调整仍需单独核对。', ' Time comparison only; certification, qualifying window and course adjustments still need checking.');
       } else gap.textContent = say('录入全马成绩后，会显示与 2:55:00 历史参考标准的时间差。', 'Add a marathon result to see its time difference from the historical 2:55:00 reference standard.');
     }
@@ -159,6 +163,7 @@ if (root) {
     }
     refresh.addEventListener('click', () => load(true));
     more.addEventListener('click', () => load());
+    renderPB();
     load();
   }
 }
