@@ -1,10 +1,13 @@
-import { OWNER, normalizeDate } from './journal-data.mjs?v=20261102-date-fix';
+import { OWNER, normalizeDate } from './journal-data.mjs?v=20261102-trends';
 
 export function parseWeight(value) {
   if (typeof value !== 'string' || !/^\d{1,3}(?:\.\d{1,2})?$/.test(value.trim())) return null;
   const kg = Number(value.trim());
   return kg > 0 ? kg : null;
 }
+
+export const KG_TO_LBS = 1 / 0.45359237;
+export const pounds = kg => Number((kg * KG_TO_LBS).toFixed(1));
 
 export function weightRecords(issues) {
   const days = new Map();
@@ -20,7 +23,9 @@ export function weightRecords(issues) {
     }
     const read = label => (fields[label] || []).join('\n').trim();
     const date = normalizeDate(read('日期 / Date'));
-    const kg = parseWeight(read('体重 / Weight (kg)'));
+    const rawLbs = read('体重 / Weight (lbs)');
+    const value = parseWeight(rawLbs || read('体重 / Weight (kg)'));
+    const kg = value === null ? null : rawLbs ? value / KG_TO_LBS : value;
     if (!date || kg === null) continue;
     const note = read('备注 / Note');
     const result = { date, kg, number: issue.number, note: note === '_No response_' ? '' : note, updated: issue.updated_at || issue.created_at || '' };
@@ -31,10 +36,10 @@ export function weightRecords(issues) {
   return [...days.values()].sort((a, b) => a.date.localeCompare(b.date));
 }
 
-export function weightChart(records) {
+export function weightChart(records, unit = 'kg') {
   if (!records.length) return null;
   const times = records.map(record => Date.parse(`${record.date}T12:00:00Z`));
-  const values = records.map(record => record.kg);
+  const values = records.map(record => unit === 'lbs' ? record.kg * KG_TO_LBS : record.kg);
   const low = Math.min(...values);
   const high = Math.max(...values);
   const padding = Math.max(1, (high - low) * .15);
@@ -45,8 +50,8 @@ export function weightChart(records) {
     min, max,
     points: records.map((record, index) => ({
       x: duration ? 64 + (times[index] - times[0]) / duration * 552 : 340,
-      y: 24 + (max - record.kg) / (max - min) * 148,
-      date: record.date, kg: record.kg,
+      y: 24 + (max - values[index]) / (max - min) * 148,
+      date: record.date, kg: record.kg, lbs: pounds(record.kg),
     })),
   };
 }

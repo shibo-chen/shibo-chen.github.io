@@ -1,0 +1,24 @@
+name: 跑量记录 / Daily running mileage
+description: 记录一天的跑步总距离，自动汇总到每周跑量趋势。
+title: "[BQ Run] 跑量记录"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        使用 shibo-chen 账号提交后公开显示在 BQ 日志中。每周按周一至周日汇总。
+        填当天所有跑步的总距离，单位 miles（英里）。休息日可填 0，补录历史也可以。
+        也可在每日日志的跑量栏填写。同一天以最近修改的一条为准，不重复累计。
+  - type: input
+    id: date
+    attributes:
+      label: 日期 / Date
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: input
+    id: mileage
+    attributes:
+      label: 跑量 / Running distance (miles)
+      placeholder: "例如 6.2；休息日填 0"
+    validations:
+      required: true

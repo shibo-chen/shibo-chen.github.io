@@ -19,9 +19,15 @@ body:
   - type: input
     id: weight
     attributes:
-      label: 体重 / Weight (kg)
-      description: 可选，填数字即可；会自动更新体重趋势。
-      placeholder: "例如 75.2"
+      label: 体重 / Weight (lbs)
+      description: 可选，单位为磅；填数字即可，会自动更新体重趋势。
+      placeholder: "例如 173.1"
+  - type: input
+    id: mileage
+    attributes:
+      label: 跑量 / Running distance (miles)
+      description: 可选，填当天跑步总距离（英里）。休息日填 0；留空表示未记录，不当作 0。
+      placeholder: "例如 6.2"
   - type: input
     id: headline
     attributes:

@@ -29,7 +29,7 @@ export function parseEntry(issue) {
   if (!issue || issue.pull_request || issue.user?.login?.toLowerCase() !== OWNER ||
       !issue.title?.startsWith('[BQ Journal]') || !Number.isSafeInteger(issue.number) || issue.number < 1) return null;
   const fields = {};
-  const labels = ['日期 / Date', '一句话 / Headline', '体重 / Weight (kg)', ...FIELDS.map(([, label]) => label)];
+  const labels = ['日期 / Date', '一句话 / Headline', '体重 / Weight (kg)', '体重 / Weight (lbs)', '跑量 / Running distance (miles)', ...FIELDS.map(([, label]) => label)];
   let current = null;
   for (const line of (issue.body || '').replace(/\r\n/g, '\n').split('\n')) {
     const heading = line.startsWith('### ') ? line.slice(4).trim() : null;
@@ -48,7 +48,9 @@ export function parseEntry(issue) {
     number: issue.number,
     date,
     headline: read('一句话 / Headline').slice(0, 160),
-    weight: read('体重 / Weight (kg)'),
+    weight: read('体重 / Weight (lbs)') || read('体重 / Weight (kg)'),
+    weightUnit: read('体重 / Weight (lbs)') ? 'lbs' : 'kg',
+    mileage: read('跑量 / Running distance (miles)'),
     updated: issue.updated_at || issue.created_at || '',
     ...Object.fromEntries(FIELDS.map(([key, label]) => [key, read(label)])),
   };

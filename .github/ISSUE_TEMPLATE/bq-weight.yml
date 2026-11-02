@@ -6,7 +6,7 @@ body:
     attributes:
       value: |
         记录会公开显示在 [BQ 日志](https://shibo-chen.github.io/zh/journal/) 的体重 tracker。请使用 shibo-chen 账号。
-        单位为 kg，数字最多保留两位小数。同一天更正时，编辑原记录即可。
+        单位为 lbs（磅），数字最多保留两位小数。同一天更正时，编辑原记录即可。已有 kg 记录会自动换算显示。
   - type: input
     id: date
     attributes:
@@ -17,8 +17,8 @@ body:
   - type: input
     id: weight
     attributes:
-      label: 体重 / Weight (kg)
-      placeholder: "例如 75.2"
+      label: 体重 / Weight (lbs)
+      placeholder: "例如 173.1"
     validations:
       required: true
   - type: input

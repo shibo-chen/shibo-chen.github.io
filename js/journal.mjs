@@ -1,6 +1,7 @@
-import { REPOSITORY, FIELDS, parseEntry, dailyEntries } from './journal-data.mjs?v=20261102-date-fix';
-import { DISTANCES, REFERENCE_BQ_SECONDS, formatTime, personalBests } from './journal-pb.mjs?v=20261102-date-fix';
-import { parseWeight, weightRecords, weightChart } from './journal-weight.mjs?v=20261102-date-fix';
+import { REPOSITORY, FIELDS, parseEntry, dailyEntries } from './journal-data.mjs?v=20261102-trends';
+import { DISTANCES, REFERENCE_BQ_SECONDS, formatTime, personalBests } from './journal-pb.mjs?v=20261102-trends';
+import { parseWeight, pounds, weightRecords, weightChart } from './journal-weight.mjs?v=20261102-trends';
+import { parseMiles, runningRecords, weeklyMileage, weekStart, journalToday, marathonHistory, drawTrendChart } from './journal-trends.mjs?v=20261102-trends';
 
 const root = document.querySelector('[data-journal]');
 if (root) {
@@ -73,6 +74,35 @@ if (root) {
     const baselines = baselineNode ? JSON.parse(baselineNode.textContent) : [];
     const pbStatus = document.getElementById('journal-pb-status');
     const weightStatus = document.getElementById('journal-weight-status');
+    const trendsStatus = document.getElementById('journal-trends-status');
+    const runningBaselineNode = document.getElementById('journal-running-baseline');
+    const runningBaselines = runningBaselineNode ? JSON.parse(runningBaselineNode.textContent) : [];
+    function renderTrends() {
+      const weeks = weeklyMileage(runningRecords(issues, runningBaselines));
+      const summary = document.getElementById('journal-mileage-summary');
+      const current = weeks.find(week => week.date === weekStart(journalToday()));
+      summary.textContent = current?.miles !== null && current?.miles !== undefined
+        ? say(`本周累计：${current.miles.toFixed(1)} miles · 已记录 ${current.days}/7 天`, `This week: ${current.miles.toFixed(1)} miles · ${current.days}/7 days logged`)
+        : say('本周还没有跑量记录；可以在日志或跑量表单中填写，休息日填 0。', 'No mileage logged this week. Use your journal or mileage form; enter 0 for a rest day.');
+      drawTrendChart(document.getElementById('journal-mileage-chart'), weeks.map(week => ({ date: week.date, value: week.miles,
+        label: `${week.date}: ${week.miles ?? '—'} miles (${week.days}/7 ${say('天已记录', 'days logged')})` })), { bars: true, unit: 'miles', summary: summary.textContent });
+      const table = document.getElementById('journal-mileage-weeks');
+      table.replaceChildren();
+      document.getElementById('journal-mileage-history').hidden = !weeks.length;
+      for (const week of [...weeks].reverse()) {
+        const row = element('tr');
+        row.append(element('td', week.date), element('td', week.miles === null ? '—' : week.miles.toFixed(1)), element('td', `${week.days}/7`));
+        table.append(row);
+      }
+      const races = marathonHistory(issues, baselines);
+      const raceSummary = document.getElementById('journal-marathon-summary');
+      const latest = races.at(-1);
+      raceSummary.textContent = latest ? say(`最近全马：${formatTime(latest.seconds)}（${latest.date}） · 共 ${races.length} 场记录`,
+        `Latest marathon: ${formatTime(latest.seconds)} (${latest.date}) · ${races.length} race results`) : say('还没有全马比赛记录。', 'No marathon results recorded yet.');
+      drawTrendChart(document.getElementById('journal-marathon-chart'), races.map(race => ({ date: race.date, value: race.seconds,
+        label: `${race.date}: ${formatTime(race.seconds)} · ${zh && race.raceZh ? race.raceZh : race.race}` })),
+      { unit: 'h:mm:ss', format: seconds => formatTime(Math.round(seconds)), summary: raceSummary.textContent });
+    }
     function renderWeight() {
       const records = weightRecords(issues);
       const history = document.getElementById('journal-weight-history');
@@ -88,17 +118,17 @@ if (root) {
       }
       const first = records[0];
       const latest = records.at(-1);
-      const delta = Number((latest.kg - first.kg).toFixed(2));
-      const change = `${delta > 0 ? '+' : ''}${delta} kg`;
-      summary.textContent = say(`最新：${latest.kg} kg（${latest.date}） · 相对首条记录：${change} · 共 ${records.length} 天`,
-        `Latest: ${latest.kg} kg (${latest.date}) · Change since first record: ${change} · ${records.length} days logged`);
+      const delta = pounds(latest.kg - first.kg);
+      const change = `${delta > 0 ? '+' : ''}${delta.toFixed(1)} lbs`;
+      summary.textContent = say(`最新：${pounds(latest.kg).toFixed(1)} lbs（${latest.date}） · 相对首条记录：${change} · 共 ${records.length} 天`,
+        `Latest: ${pounds(latest.kg).toFixed(1)} lbs (${latest.date}) · Change since first record: ${change} · ${records.length} days logged`);
       const svg = (tag, attrs, text) => {
         const node = document.createElementNS('http://www.w3.org/2000/svg', tag);
         for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, String(value));
         if (text) node.textContent = text;
         return node;
       };
-      const plot = weightChart(records);
+      const plot = weightChart(records, 'lbs');
       chart.append(svg('title', {}, summary.textContent));
       for (let index = 0; index <= 2; index++) {
         const y = 24 + index * 74;
@@ -106,13 +136,13 @@ if (root) {
         chart.append(svg('line', { x1: 64, x2: 616, y1: y, y2: y, stroke: 'var(--border)' }),
           svg('text', { x: 56, y: y + 4, 'text-anchor': 'end', fill: 'var(--secondary)', 'font-size': 12 }, `${kg.toFixed(1)}`));
       }
-      chart.append(svg('text', { x: 10, y: 14, fill: 'var(--secondary)', 'font-size': 12 }, 'kg'),
+      chart.append(svg('text', { x: 10, y: 14, fill: 'var(--secondary)', 'font-size': 12 }, 'lbs'),
         svg('text', { x: 64, y: 204, fill: 'var(--secondary)', 'font-size': 12 }, first.date),
         svg('text', { x: 616, y: 204, 'text-anchor': 'end', fill: 'var(--secondary)', 'font-size': 12 }, latest.date),
         svg('polyline', { points: plot.points.map(point => `${point.x},${point.y}`).join(' '), fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2 }));
       for (const point of plot.points) {
         const dot = svg('circle', { cx: point.x, cy: point.y, r: 3, fill: 'var(--accent)' });
-        dot.append(svg('title', {}, `${point.date}: ${point.kg} kg`));
+        dot.append(svg('title', {}, `${point.date}: ${point.lbs.toFixed(1)} lbs`));
         chart.append(dot);
       }
       for (const record of [...records].reverse()) {
@@ -121,7 +151,7 @@ if (root) {
         edit.href = originalURL(record.number);
         const source = element('td');
         source.append(edit);
-        row.append(element('td', record.date), element('td', String(record.kg)), element('td', record.note || '—'), source);
+        row.append(element('td', record.date), element('td', pounds(record.kg).toFixed(1)), element('td', record.note || '—'), source);
         table.append(row);
       }
     }
@@ -173,7 +203,12 @@ if (root) {
         heading.textContent = entry.headline || say('每日记录', 'Daily entry');
         const body = element('div', '', 'post-content');
         const weight = parseWeight(entry.weight);
-        if (weight !== null) body.append(element('p', say(`体重：${weight} kg`, `Weight: ${weight} kg`), 'journal-help'));
+        if (weight !== null) {
+          const lbs = entry.weightUnit === 'lbs' ? weight : pounds(weight);
+          body.append(element('p', say(`体重：${lbs.toFixed(1)} lbs`, `Weight: ${lbs.toFixed(1)} lbs`), 'journal-help'));
+        }
+        const miles = parseMiles(entry.mileage);
+        if (miles !== null) body.append(element('p', say(`跑量：${miles} miles`, `Running: ${miles} miles`), 'journal-help'));
         for (const [key, label] of FIELDS) {
           const section = element('section');
           section.append(element('h4', label.split(' / ')[zh ? 0 : 1]),
@@ -188,6 +223,7 @@ if (root) {
       [...list.children].sort((a, b) => b.dataset.date.localeCompare(a.dataset.date)).forEach(node => list.append(node));
       renderPB();
       renderWeight();
+      renderTrends();
     }
     async function load(reset = false) {
       if (busy) return;
@@ -196,6 +232,7 @@ if (root) {
       status.textContent = say('正在读取最新记录…', 'Loading the latest entries…');
       pbStatus.textContent = say('正在核对全部历史成绩…', 'Checking all historical results…');
       weightStatus.textContent = say('正在同步体重记录…', 'Syncing weight records…');
+      trendsStatus.textContent = say('正在同步跑量和比赛记录…', 'Syncing mileage and race results…');
       try {
         let next = reset ? 1 : page + 1;
         while (true) {
@@ -210,10 +247,12 @@ if (root) {
         }
         pbStatus.textContent = say('已核对全部已提交成绩；每个距离显示最快一场。', 'All submitted results checked; fastest result shown for each distance.');
         weightStatus.textContent = say('体重记录已同步。', 'Weight records are up to date.');
+        trendsStatus.textContent = say('趋势记录已同步。', 'Trend records are up to date.');
         status.textContent = say('已同步。新提交后点「刷新」即可看到。', 'Up to date. Refresh here after submitting a new entry.');
       } catch {
         pbStatus.textContent = say('未能核对完整历史成绩；当前 PB 可能不完整，请刷新重试。', 'Could not check the full result history; displayed PBs may be incomplete. Refresh to retry.');
         weightStatus.textContent = say('未能同步全部体重记录；已显示的数据可能不完整，请刷新重试。', 'Could not sync all weight records. Displayed data may be incomplete; refresh to retry.');
+        trendsStatus.textContent = say('同步未完成，图中记录可能不完整；请刷新重试。', 'Sync incomplete; plotted data may be incomplete. Refresh to retry.');
         failure(say('暂时无法同步最新记录（网络或访问频率限制）。已显示的记录仍可阅读，请稍后刷新。',
           'Unable to sync new entries (connection or rate limit). Existing entries remain readable; please refresh shortly.'));
       } finally {
@@ -224,6 +263,7 @@ if (root) {
     refresh.addEventListener('click', () => load(true));
     more.addEventListener('click', () => load());
     renderPB();
+    renderTrends();
     load();
   }
 }

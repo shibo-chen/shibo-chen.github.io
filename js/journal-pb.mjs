@@ -1,4 +1,4 @@
-import { OWNER, normalizeDate } from './journal-data.mjs?v=20261102-date-fix';
+import { OWNER, normalizeDate } from './journal-data.mjs?v=20261102-trends';
 
 export const DISTANCES = ['5K', '10K', 'Half marathon', 'Marathon'];
 // Historical reference only: 2027 men's 18–34 qualifying standard.
