@@ -1,4 +1,4 @@
-import { OWNER, validDate } from './journal-data.mjs';
+import { OWNER, normalizeDate } from './journal-data.mjs?v=20261102-date-fix';
 
 export const DISTANCES = ['5K', '10K', 'Half marathon', 'Marathon'];
 // Historical reference only: 2027 men's 18–34 qualifying standard.
@@ -33,9 +33,9 @@ export function parsePB(issue) {
   const read = label => (fields[label] || []).join('\n').trim();
   const distance = read(labels[0]);
   const seconds = parseTime(read(labels[1]));
-  const date = read(labels[2]);
+  const date = normalizeDate(read(labels[2]));
   const race = read(labels[3]);
-  if (!DISTANCES.includes(distance) || seconds === null || !validDate(date) || !race || race === '_No response_') return null;
+  if (!DISTANCES.includes(distance) || seconds === null || !date || !race || race === '_No response_') return null;
   return { number: issue.number, distance, seconds, date, race };
 }
 

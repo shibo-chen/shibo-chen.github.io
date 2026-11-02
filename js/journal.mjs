@@ -1,6 +1,6 @@
-import { REPOSITORY, FIELDS, parseEntry, dailyEntries } from './journal-data.mjs';
-import { DISTANCES, REFERENCE_BQ_SECONDS, formatTime, personalBests } from './journal-pb.mjs';
-import { parseWeight, weightRecords, weightChart } from './journal-weight.mjs';
+import { REPOSITORY, FIELDS, parseEntry, dailyEntries } from './journal-data.mjs?v=20261102-date-fix';
+import { DISTANCES, REFERENCE_BQ_SECONDS, formatTime, personalBests } from './journal-pb.mjs?v=20261102-date-fix';
+import { parseWeight, weightRecords, weightChart } from './journal-weight.mjs?v=20261102-date-fix';
 
 const root = document.querySelector('[data-journal]');
 if (root) {

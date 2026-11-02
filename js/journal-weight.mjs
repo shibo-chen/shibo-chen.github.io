@@ -1,4 +1,4 @@
-import { OWNER, validDate } from './journal-data.mjs';
+import { OWNER, normalizeDate } from './journal-data.mjs?v=20261102-date-fix';
 
 export function parseWeight(value) {
   if (typeof value !== 'string' || !/^\d{1,3}(?:\.\d{1,2})?$/.test(value.trim())) return null;
@@ -19,9 +19,9 @@ export function weightRecords(issues) {
       else if (heading) fields[heading].push(line);
     }
     const read = label => (fields[label] || []).join('\n').trim();
-    const date = read('日期 / Date');
+    const date = normalizeDate(read('日期 / Date'));
     const kg = parseWeight(read('体重 / Weight (kg)'));
-    if (!validDate(date) || kg === null) continue;
+    if (!date || kg === null) continue;
     const note = read('备注 / Note');
     const result = { date, kg, number: issue.number, note: note === '_No response_' ? '' : note, updated: issue.updated_at || issue.created_at || '' };
     const previous = days.get(date);

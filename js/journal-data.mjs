@@ -15,6 +15,16 @@ export function validDate(value) {
   return Number.isFinite(date.getTime()) && date.toISOString().slice(0, 10) === value;
 }
 
+// Accept ordinary form dates without requiring zero-padded month/day values.
+// Always return a real calendar date in the canonical format used for sorting.
+export function normalizeDate(value) {
+  if (typeof value !== 'string') return null;
+  const match = /^(\d{4})-(\d{1,2})-(\d{1,2})$/.exec(value.trim());
+  if (!match) return null;
+  const date = `${match[1]}-${match[2].padStart(2, '0')}-${match[3].padStart(2, '0')}`;
+  return validDate(date) ? date : null;
+}
+
 export function parseEntry(issue) {
   if (!issue || issue.pull_request || issue.user?.login?.toLowerCase() !== OWNER ||
       !issue.title?.startsWith('[BQ Journal]') || !Number.isSafeInteger(issue.number) || issue.number < 1) return null;
@@ -32,8 +42,8 @@ export function parseEntry(issue) {
     const value = (fields[label] || []).join('\n').trim();
     return value === '_No response_' ? '' : value;
   };
-  const date = read('日期 / Date');
-  if (!validDate(date) || !read('训练 / Training')) return null;
+  const date = normalizeDate(read('日期 / Date'));
+  if (!date || !read('训练 / Training')) return null;
   return {
     number: issue.number,
     date,
