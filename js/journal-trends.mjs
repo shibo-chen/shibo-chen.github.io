@@ -72,11 +72,18 @@ export function marathonHistory(issues, baselines = []) {
   return [...races.values()].sort((a, b) => a.date.localeCompare(b.date));
 }
 
+// SVG elements do not reliably reflect the HTML `hidden` attribute through
+// the `.hidden` property. The stylesheet checks the attribute directly.
+export function setChartVisible(chart, visible) {
+  if (visible) chart.removeAttribute('hidden');
+  else chart.setAttribute('hidden', '');
+}
+
 // SVG charts share dimensions with the weight plot and retain calendar spacing.
 export function drawTrendChart(chart, records, { bars = false, unit, format = value => Number(value.toFixed(1)).toString(), summary = '' }) {
   chart.replaceChildren();
   const known = records.filter(record => record.value !== null && Number.isFinite(record.value));
-  chart.hidden = !known.length;
+  setChartVisible(chart, known.length > 0);
   if (!known.length) return;
   const svg = (tag, attrs, text) => {
     const node = document.createElementNS('http://www.w3.org/2000/svg', tag);

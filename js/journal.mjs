@@ -1,7 +1,7 @@
 import { REPOSITORY, FIELDS, parseEntry, dailyEntries } from './journal-data.mjs?v=20261102-trends';
 import { DISTANCES, REFERENCE_BQ_SECONDS, formatTime, personalBests } from './journal-pb.mjs?v=20261102-trends';
 import { parseWeight, pounds, weightRecords, weightChart } from './journal-weight.mjs?v=20261102-trends';
-import { parseMiles, runningRecords, weeklyMileage, weekStart, journalToday, marathonHistory, drawTrendChart } from './journal-trends.mjs?v=20261102-trends';
+import { parseMiles, runningRecords, weeklyMileage, weekStart, journalToday, marathonHistory, drawTrendChart, setChartVisible } from './journal-trends.mjs?v=20261102-svgfix';
 
 const root = document.querySelector('[data-journal]');
 if (root) {
@@ -109,7 +109,8 @@ if (root) {
       const table = document.getElementById('journal-weights');
       const chart = document.getElementById('journal-weight-chart');
       const summary = document.getElementById('journal-weight-summary');
-      history.hidden = chart.hidden = !records.length;
+      history.hidden = !records.length;
+      setChartVisible(chart, records.length > 0);
       chart.replaceChildren();
       table.replaceChildren();
       if (!records.length) {
