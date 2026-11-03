@@ -1,0 +1,13 @@
+.journal-card { padding: 14px 18px; margin-bottom: 10px; }
+.journal-card time { font-size: 12px; }
+.journal-card h3 { font-size: 18px; line-height: 1.35; margin: 3px 0 8px; }
+.journal-card .post-content { margin: 6px 0; }
+.journal-card .post-content section { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; padding: 6px 0; border-top: 1px solid var(--border); }
+.journal-card .post-content section h4 { margin: 0; font-size: 12px; line-height: 1.5; color: var(--secondary); }
+.journal-card .post-content p { font-size: 14px; color: var(--primary); line-height: 1.5; margin: 0; overflow-wrap: anywhere; }
+.journal-card .post-content > .journal-help { display: inline-block; margin: 0 14px 6px 0; color: var(--secondary); font-size: 12px; }
+.journal-card .journal-source { display: inline-block; margin-top: 4px; font-size: 12px; }
+@media (max-width: 480px) {
+  .journal-card { padding: 12px 14px; }
+  .journal-card .post-content section { grid-template-columns: 48px minmax(0, 1fr); gap: 8px; }
+}

@@ -8,6 +8,7 @@ export function parseWeight(value) {
 
 export const KG_TO_LBS = 1 / 0.45359237;
 export const pounds = kg => Number((kg * KG_TO_LBS).toFixed(1));
+export const TARGET_WEIGHT_KG = 67.5;
 
 export function weightRecords(issues) {
   const days = new Map();
@@ -36,18 +37,20 @@ export function weightRecords(issues) {
   return [...days.values()].sort((a, b) => a.date.localeCompare(b.date));
 }
 
-export function weightChart(records, unit = 'kg') {
+export function weightChart(records, unit = 'kg', reference = null) {
   if (!records.length) return null;
   const times = records.map(record => Date.parse(`${record.date}T12:00:00Z`));
   const values = records.map(record => unit === 'lbs' ? record.kg * KG_TO_LBS : record.kg);
-  const low = Math.min(...values);
-  const high = Math.max(...values);
+  const domain = reference === null ? values : [...values, reference];
+  const low = Math.min(...domain);
+  const high = Math.max(...domain);
   const padding = Math.max(1, (high - low) * .15);
   const min = Math.max(0, low - padding);
   const max = high + padding;
   const duration = times.at(-1) - times[0];
   return {
     min, max,
+    referenceY: reference === null ? null : 24 + (max - reference) / (max - min) * 148,
     points: records.map((record, index) => ({
       x: duration ? 64 + (times[index] - times[0]) / duration * 552 : 340,
       y: 24 + (max - values[index]) / (max - min) * 148,

@@ -1,7 +1,7 @@
-import { REPOSITORY, FIELDS, parseEntry, dailyEntries } from './journal-data.mjs?v=20261102-trends';
-import { DISTANCES, REFERENCE_BQ_SECONDS, formatTime, personalBests } from './journal-pb.mjs?v=20261102-trends';
-import { parseWeight, pounds, weightRecords, weightChart } from './journal-weight.mjs?v=20261102-trends';
-import { parseMiles, runningRecords, weeklyMileage, weekStart, journalToday, marathonHistory, drawTrendChart, setChartVisible } from './journal-trends.mjs?v=20261102-svgfix';
+import { REPOSITORY, FIELDS, parseEntry, dailyEntries } from './journal-data.mjs?v=20261102-goals';
+import { DISTANCES, REFERENCE_BQ_SECONDS, REFERENCE_BQ_ACCEPTED_SECONDS, formatTime, personalBests } from './journal-pb.mjs?v=20261102-goals';
+import { parseWeight, pounds, weightRecords, weightChart, TARGET_WEIGHT_KG } from './journal-weight.mjs?v=20261102-goals';
+import { parseMiles, runningRecords, weeklyMileage, weekStart, journalToday, marathonHistory, drawTrendChart, setChartVisible } from './journal-trends.mjs?v=20261102-goals';
 
 const root = document.querySelector('[data-journal]');
 if (root) {
@@ -101,7 +101,8 @@ if (root) {
         `Latest marathon: ${formatTime(latest.seconds)} (${latest.date}) · ${races.length} race results`) : say('还没有全马比赛记录。', 'No marathon results recorded yet.');
       drawTrendChart(document.getElementById('journal-marathon-chart'), races.map(race => ({ date: race.date, value: race.seconds,
         label: `${race.date}: ${formatTime(race.seconds)} · ${zh && race.raceZh ? race.raceZh : race.race}` })),
-      { unit: 'h:mm:ss', format: seconds => formatTime(Math.round(seconds)), summary: raceSummary.textContent });
+      { unit: 'h:mm:ss', format: seconds => formatTime(Math.round(seconds)), summary: raceSummary.textContent,
+        reference: { value: REFERENCE_BQ_ACCEPTED_SECONDS, label: say('2027 录取参考 2:49:43', '2027 acceptance reference 2:49:43') } });
     }
     function renderWeight() {
       const records = weightRecords(issues);
@@ -114,22 +115,22 @@ if (root) {
       chart.replaceChildren();
       table.replaceChildren();
       if (!records.length) {
-        summary.textContent = say('还没有体重记录，填入第一条就可以开始。', 'No weight records yet. Add the first one to get started.');
+        summary.textContent = say('还没有体重记录，填入第一条就可以开始。目标：148.8 lbs（67.5 kg）。', 'No weight records yet. Add the first one to get started. Goal: 148.8 lbs (67.5 kg).');
         return;
       }
       const first = records[0];
       const latest = records.at(-1);
       const delta = pounds(latest.kg - first.kg);
       const change = `${delta > 0 ? '+' : ''}${delta.toFixed(1)} lbs`;
-      summary.textContent = say(`最新：${pounds(latest.kg).toFixed(1)} lbs（${latest.date}） · 相对首条记录：${change} · 共 ${records.length} 天`,
-        `Latest: ${pounds(latest.kg).toFixed(1)} lbs (${latest.date}) · Change since first record: ${change} · ${records.length} days logged`);
+      summary.textContent = say(`最新：${pounds(latest.kg).toFixed(1)} lbs（${latest.date}） · 目标：${pounds(TARGET_WEIGHT_KG).toFixed(1)} lbs（67.5 kg） · 相对首条记录：${change} · 共 ${records.length} 天`,
+        `Latest: ${pounds(latest.kg).toFixed(1)} lbs (${latest.date}) · Goal: ${pounds(TARGET_WEIGHT_KG).toFixed(1)} lbs (67.5 kg) · Change since first record: ${change} · ${records.length} days logged`);
       const svg = (tag, attrs, text) => {
         const node = document.createElementNS('http://www.w3.org/2000/svg', tag);
         for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, String(value));
         if (text) node.textContent = text;
         return node;
       };
-      const plot = weightChart(records, 'lbs');
+      const plot = weightChart(records, 'lbs', pounds(TARGET_WEIGHT_KG));
       chart.append(svg('title', {}, summary.textContent));
       for (let index = 0; index <= 2; index++) {
         const y = 24 + index * 74;
@@ -139,8 +140,10 @@ if (root) {
       }
       chart.append(svg('text', { x: 10, y: 14, fill: 'var(--secondary)', 'font-size': 12 }, 'lbs'),
         svg('text', { x: 64, y: 204, fill: 'var(--secondary)', 'font-size': 12 }, first.date),
-        svg('text', { x: 616, y: 204, 'text-anchor': 'end', fill: 'var(--secondary)', 'font-size': 12 }, latest.date),
-        svg('polyline', { points: plot.points.map(point => `${point.x},${point.y}`).join(' '), fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2 }));
+        svg('text', { x: 616, y: 204, 'text-anchor': 'end', fill: 'var(--secondary)', 'font-size': 12 }, latest.date));
+      chart.append(svg('line', { x1: 64, x2: 616, y1: plot.referenceY, y2: plot.referenceY, stroke: 'var(--primary)', 'stroke-width': 1.5, 'stroke-dasharray': '6 4' }),
+        svg('text', { x: 610, y: plot.referenceY - 6, 'text-anchor': 'end', fill: 'var(--primary)', 'font-size': 11 }, say('目标 148.8 lbs', 'Goal 148.8 lbs')));
+      if (plot.points.length > 1) chart.append(svg('polyline', { points: plot.points.map(point => `${point.x},${point.y}`).join(' '), fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2 }));
       for (const point of plot.points) {
         const dot = svg('circle', { cx: point.x, cy: point.y, r: 3, fill: 'var(--accent)' });
         dot.append(svg('title', {}, `${point.date}: ${point.lbs.toFixed(1)} lbs`));
@@ -200,8 +203,7 @@ if (root) {
         card.dataset.date = entry.date;
         const date = element('time', entry.date);
         date.dateTime = entry.date;
-        const heading = element('h3');
-        heading.textContent = entry.headline || say('每日记录', 'Daily entry');
+        const heading = entry.headline ? element('h3', entry.headline) : null;
         const body = element('div', '', 'post-content');
         const weight = parseWeight(entry.weight);
         if (weight !== null) {
@@ -211,14 +213,17 @@ if (root) {
         const miles = parseMiles(entry.mileage);
         if (miles !== null) body.append(element('p', say(`跑量：${miles} miles`, `Running: ${miles} miles`), 'journal-help'));
         for (const [key, label] of FIELDS) {
+          if (!entry[key]) continue;
           const section = element('section');
           section.append(element('h4', label.split(' / ')[zh ? 0 : 1]),
-            element('p', entry[key] || say('未记录。', 'Not recorded.'), 'journal-entry-text'));
+            element('p', entry[key], 'journal-entry-text'));
           body.append(section);
         }
         const edit = element('a', say('修改这条记录 ↗', 'Edit this entry ↗'), 'journal-source');
         edit.href = originalURL(entry.number);
-        card.append(date, heading, body, edit);
+        card.append(date);
+        if (heading) card.append(heading);
+        card.append(body, edit);
         list.append(card);
       }
       [...list.children].sort((a, b) => b.dataset.date.localeCompare(a.dataset.date)).forEach(node => list.append(node));

@@ -80,7 +80,7 @@ export function setChartVisible(chart, visible) {
 }
 
 // SVG charts share dimensions with the weight plot and retain calendar spacing.
-export function drawTrendChart(chart, records, { bars = false, unit, format = value => Number(value.toFixed(1)).toString(), summary = '' }) {
+export function drawTrendChart(chart, records, { bars = false, unit, format = value => Number(value.toFixed(1)).toString(), summary = '', reference = null }) {
   chart.replaceChildren();
   const known = records.filter(record => record.value !== null && Number.isFinite(record.value));
   setChartVisible(chart, known.length > 0);
@@ -91,8 +91,9 @@ export function drawTrendChart(chart, records, { bars = false, unit, format = va
     if (text) node.textContent = text;
     return node;
   };
-  const high = Math.max(...known.map(record => record.value));
-  const low = Math.min(...known.map(record => record.value));
+  const domain = reference ? [...known.map(record => record.value), reference.value] : known.map(record => record.value);
+  const high = Math.max(...domain);
+  const low = Math.min(...domain);
   const padding = Math.max(unit === 'h:mm:ss' ? 60 : 1, (high - low) * .15);
   const min = bars ? 0 : Math.max(0, low - padding);
   const max = bars ? Math.max(1, high * 1.12) : high + padding;
@@ -110,6 +111,11 @@ export function drawTrendChart(chart, records, { bars = false, unit, format = va
   chart.append(svg('text', { x: 8, y: 14, fill: 'var(--secondary)', 'font-size': 12 }, unit),
     svg('text', { x: 64, y: 204, fill: 'var(--secondary)', 'font-size': 12 }, records[0].date),
     svg('text', { x: 616, y: 204, 'text-anchor': 'end', fill: 'var(--secondary)', 'font-size': 12 }, records.at(-1).date));
+  if (reference) {
+    const at = y(reference.value);
+    chart.append(svg('line', { x1: 64, x2: 616, y1: at, y2: at, stroke: 'var(--primary)', 'stroke-width': 1.5, 'stroke-dasharray': '6 4' }),
+      svg('text', { x: 610, y: at - 6, 'text-anchor': 'end', fill: 'var(--primary)', 'font-size': 11 }, reference.label));
+  }
   if (!bars && known.length > 1) chart.append(svg('polyline', { points: known.map(record => `${x(record.date)},${y(record.value)}`).join(' '), fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2 }));
   for (const record of known) {
     const node = bars && record.value > 0

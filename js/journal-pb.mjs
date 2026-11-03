@@ -3,6 +3,7 @@ import { OWNER, normalizeDate } from './journal-data.mjs?v=20261102-trends';
 export const DISTANCES = ['5K', '10K', 'Half marathon', 'Marathon'];
 // Historical reference only: 2027 men's 18–34 qualifying standard.
 export const REFERENCE_BQ_SECONDS = 2 * 3600 + 55 * 60;
+export const REFERENCE_BQ_ACCEPTED_SECONDS = 2 * 3600 + 49 * 60 + 43;
 
 export function parseTime(value) {
   if (!/^\d{1,3}:\d{2}(?::\d{2})?$/.test(value)) return null;
